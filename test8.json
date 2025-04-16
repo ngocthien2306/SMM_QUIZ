@@ -1,0 +1,280 @@
+{
+  "quizTitle": "Social Media Mining: Comprehensive Concepts",
+  "questions": [
+    {
+      "question": "According to the course introduction, what is the main goal of learning about Graph Neural Networks (GNNs)?",
+      "options": [
+        "To build and deploy social media platforms",
+        "To extract user personal information",
+        "To learn how to formulate problems as GNN-solvable tasks",
+        "To create viral marketing campaigns"
+      ],
+      "answer": 2,
+      "explanation": "According to the course introduction, the main goal of learning about Graph Neural Networks is to learn how to formulate problems as GNN-solvable tasks. This involves understanding how to transform real-world problems into appropriate graph structures that GNNs can process."
+    },
+    {
+      "question": "What are the three common models discussed for generating networks with properties similar to real-world networks?",
+      "options": [
+        "Small-world, Scale-free, and Random Graph models",
+        "Barabási-Albert, Watts-Strogatz, and Erdős-Rényi models",
+        "Node-link, Matrix, and Force-directed models",
+        "Homogeneous, Heterogeneous, and Hierarchical models"
+      ],
+      "answer": 0,
+      "explanation": "The three common models discussed for generating networks similar to real-world networks are the Small-world model (Watts-Strogatz), Scale-free model (preferential attachment/Barabási-Albert), and Random Graph model (Erdős-Rényi). These capture different properties observed in real networks."
+    },
+    {
+      "question": "In the context of social media analysis, what does 'structural hole' refer to?",
+      "options": [
+        "A bug in the social network platform",
+        "Missing data in network analysis",
+        "A gap between communities that could be bridged by a user",
+        "An area with poor network coverage"
+      ],
+      "answer": 2,
+      "explanation": "In social media analysis, a 'structural hole' refers to a gap between communities that could be bridged by a user. Users who bridge structural holes often have access to diverse information and can act as brokers between otherwise disconnected groups."
+    },
+    {
+      "question": "What distinguishes the Preferential Attachment model from the Random Graph model?",
+      "options": [
+        "It generates networks with fewer nodes",
+        "It creates networks with power-law degree distributions where some nodes become highly connected hubs",
+        "It only works with directed graphs",
+        "It produces networks with higher clustering coefficients"
+      ],
+      "answer": 1,
+      "explanation": "The Preferential Attachment model distinguishes itself from the Random Graph model by creating networks with power-law degree distributions where some nodes become highly connected hubs. This 'rich-get-richer' mechanism reflects the way many real-world networks grow."
+    },
+    {
+      "question": "When converting a real-world problem into a graph-based representation, what is the most critical first step?",
+      "options": [
+        "Choosing the best algorithm",
+        "Collecting as much data as possible",
+        "Identifying what entities should be nodes and what relationships should be edges",
+        "Determining whether to use directed or undirected edges"
+      ],
+      "answer": 2,
+      "explanation": "The most critical first step when converting a real-world problem into a graph-based representation is identifying what entities should be nodes and what relationships should be edges. This fundamental design decision shapes how the problem will be modeled and solved."
+    },
+    {
+      "question": "Which property of real-world social networks is NOT well-modeled by random graphs?",
+      "options": [
+        "Average path length",
+        "Clustering coefficient",
+        "Diameter",
+        "Connectivity"
+      ],
+      "answer": 1,
+      "explanation": "The clustering coefficient is not well-modeled by random graphs. Random graphs typically have much lower clustering coefficients than real-world social networks, which exhibit high transitivity (friends of friends tend to be friends)."
+    },
+    {
+      "question": "In the context of social media mining, what is the 'cold start problem'?",
+      "options": [
+        "The challenge of analyzing inactive users",
+        "The difficulty of making recommendations for new users with little history",
+        "The slow initial growth of new social networks",
+        "The problem of analyzing wintertime social media usage patterns"
+      ],
+      "answer": 1,
+      "explanation": "In social media mining, the 'cold start problem' refers to the difficulty of making recommendations for new users with little history. Without sufficient interaction data, it's challenging to generate personalized content or connection recommendations for these users."
+    },
+    {
+      "question": "According to the materials, which of the following characteristics is typical of real-world social networks?",
+      "options": [
+        "Uniform degree distribution",
+        "High average path length",
+        "Power-law degree distribution",
+        "Low transitivity"
+      ],
+      "answer": 2,
+      "explanation": "According to the materials, power-law degree distribution is typical of real-world social networks. This means there are many users with few connections and a few highly connected users (influencers or hubs)."
+    },
+    {
+      "question": "What is the typical value range for the power-law exponent in scale-free networks?",
+      "options": [
+        "Between 0 and 1",
+        "Between 1 and 2",
+        "Between 2 and 3",
+        "Greater than 4"
+      ],
+      "answer": 2,
+      "explanation": "The typical value range for the power-law exponent in scale-free networks is between 2 and 3. This range has been observed across various real-world networks, including many social media platforms."
+    },
+    {
+      "question": "What does the 'six degrees of separation' concept refer to in network science?",
+      "options": [
+        "The minimum number of connections needed for network resilience",
+        "The typical clustering coefficient of social networks",
+        "The average number of friends most users have",
+        "The idea that any two people are connected by at most six friendship links"
+      ],
+      "answer": 3,
+      "explanation": "The 'six degrees of separation' concept refers to the idea that any two people are connected by at most six friendship links. This small-world phenomenon was demonstrated by Milgram's experiment and is reflected in the small average path lengths observed in social networks."
+    },
+    {
+      "question": "What is the primary difference between homogeneous and heterogeneous graph neural networks?",
+      "options": [
+        "Homogeneous GNNs process larger graphs",
+        "Heterogeneous GNNs can handle different types of nodes and edge relationships",
+        "Homogeneous GNNs always perform better for social network analysis",
+        "Heterogeneous GNNs require less training data"
+      ],
+      "answer": 1,
+      "explanation": "The primary difference between homogeneous and heterogeneous graph neural networks is that heterogeneous GNNs can handle different types of nodes and edge relationships. This makes them suitable for complex social media graphs with users, posts, topics, and various interaction types."
+    },
+    {
+      "question": "What is the key challenge that self-supervised learning in GNNs aims to address?",
+      "options": [
+        "Computational complexity of graph processing",
+        "The scarcity of labeled data in real-world graph problems",
+        "Visualization of high-dimensional graph embeddings",
+        "Handling dynamic changes in graph structure"
+      ],
+      "answer": 1,
+      "explanation": "Self-supervised learning in GNNs primarily aims to address the scarcity of labeled data in real-world graph problems. By creating supervision signals from the data itself (through techniques like graph data augmentation), models can learn useful representations without requiring extensive manual labeling."
+    },
+    {
+      "question": "How does the Small-World model achieve both high clustering and short path lengths?",
+      "options": [
+        "By creating many high-degree hubs",
+        "By starting with a regular lattice and rewiring some connections randomly",
+        "By using a hierarchical structure",
+        "By optimizing the graph for both properties simultaneously"
+      ],
+      "answer": 1,
+      "explanation": "The Small-World model achieves both high clustering and short path lengths by starting with a regular lattice (which has high clustering) and rewiring some connections randomly. Even a small percentage of random rewiring drastically reduces average path length while preserving much of the local clustering."
+    },
+    {
+      "question": "What is one of the main limitations of PageRank when applied to real-world social influence analysis?",
+      "options": [
+        "It's too computationally expensive",
+        "It doesn't consider the content or quality of interactions",
+        "It can only be applied to websites",
+        "It requires all graphs to be fully connected"
+      ],
+      "answer": 1,
+      "explanation": "One main limitation of PageRank when applied to real-world social influence analysis is that it doesn't consider the content or quality of interactions. It only accounts for the network structure, while influence in social media often depends on content, context, and interaction types."
+    },
+    {
+      "question": "According to the materials, what is the primary reason that large language models benefit from being combined with graph structures?",
+      "options": [
+        "Graphs reduce computational requirements",
+        "Graphs enable better visualization of text data",
+        "Graphs provide relational context between entities and documents",
+        "Graphs force language models to be more concise"
+      ],
+      "answer": 2,
+      "explanation": "According to the materials, the primary reason large language models benefit from being combined with graph structures is that graphs provide relational context between entities and documents. This helps models better understand connections and dependencies that aren't explicit in text alone."
+    },
+    {
+      "question": "In the context of fake news detection on social media, which approach is likely to be most effective?",
+      "options": [
+        "Content-only analysis using text classification",
+        "Network-only analysis of sharing patterns",
+        "Hybrid approaches that combine content analysis with propagation patterns",
+        "Simple statistical analysis of engagement metrics"
+      ],
+      "answer": 2,
+      "explanation": "In fake news detection, hybrid approaches that combine content analysis with propagation patterns are likely to be most effective. These approaches can identify suspicious content while also considering how that content spreads through the network, which often differs between genuine and fake news."
+    },
+    {
+      "question": "What is one of the main advantages of GNNs over traditional network analysis methods?",
+      "options": [
+        "GNNs are always faster",
+        "GNNs can combine node features with graph structure",
+        "GNNs require less data",
+        "GNNs don't require any parameter tuning"
+      ],
+      "answer": 1,
+      "explanation": "One of the main advantages of GNNs over traditional network analysis methods is that GNNs can combine node features with graph structure. Traditional methods often use either node attributes or network topology separately, while GNNs naturally integrate both information sources."
+    },
+    {
+      "question": "Which of the following best describes the over-smoothing problem in deep GNNs?",
+      "options": [
+        "The model becomes too computationally expensive",
+        "The training process takes too long to converge",
+        "Node representations become too similar as more layers are added",
+        "The graph structure becomes too dense"
+      ],
+      "answer": 2,
+      "explanation": "The over-smoothing problem in deep GNNs refers to the phenomenon where node representations become too similar as more layers are added. After many message-passing steps, all nodes tend to converge to similar representations, losing their distinctive features."
+    },
+    {
+      "question": "What is the key difference between transductive and inductive learning in graph-based models?",
+      "options": [
+        "Transductive learning is faster",
+        "Transductive learning requires more data",
+        "Inductive learning can generalize to unseen nodes and graphs",
+        "Inductive learning only works with homogeneous graphs"
+      ],
+      "answer": 2,
+      "explanation": "The key difference between transductive and inductive learning is that inductive learning can generalize to unseen nodes and graphs. Transductive approaches learn representations specific to the training graph, while inductive approaches learn functions that can be applied to new nodes or entirely new graphs."
+    },
+    {
+      "question": "Which network property would best indicate the presence of echo chambers in a social media discussion?",
+      "options": [
+        "High average degree",
+        "Short average path length",
+        "High modularity with limited inter-community connections",
+        "Power-law degree distribution"
+      ],
+      "answer": 2,
+      "explanation": "High modularity with limited inter-community connections would best indicate the presence of echo chambers in a social media discussion. Echo chambers form when communities become isolated with dense internal connections but sparse connections to other communities with different viewpoints."
+    },
+    {
+      "question": "According to the materials, what is the typical clustering coefficient range for real social networks?",
+      "options": [
+        "0.0 to 0.1",
+        "0.1 to 0.3",
+        "0.3 to 0.8",
+        "0.9 to 1.0"
+      ],
+      "answer": 2,
+      "explanation": "According to the materials, the typical clustering coefficient range for real social networks is approximately 0.3 to 0.8. This relatively high value reflects the tendency for triadic closure (friends of friends being friends) in social networks."
+    },
+    {
+      "question": "In the domain of fraud detection, what advantage do graph-based approaches have over traditional methods?",
+      "options": [
+        "They process data faster",
+        "They can identify coordinated behaviors and relationships between entities",
+        "They require less data preprocessing",
+        "They are always more accurate"
+      ],
+      "answer": 1,
+      "explanation": "In fraud detection, graph-based approaches have the advantage of being able to identify coordinated behaviors and relationships between entities. While traditional methods might analyze entities in isolation, graph approaches can detect suspicious patterns in the relationships and interactions between potentially fraudulent accounts."
+    },
+    {
+      "question": "According to Professor Cheng-Te Li's presentation, what is a key application area for Graph Neural Networks in natural language processing?",
+      "options": [
+        "Speech recognition",
+        "Machine translation",
+        "Text classification",
+        "Handwriting recognition"
+      ],
+      "answer": 2,
+      "explanation": "According to Professor Cheng-Te Li's presentation, text classification is a key application area for Graph Neural Networks in natural language processing. GNNs can model relationships between words and documents to improve classification performance."
+    },
+    {
+      "question": "What is the primary challenge in evaluating community detection algorithms?",
+      "options": [
+        "They require too much computational power",
+        "The 'ground truth' communities are often unknown",
+        "They only work with directed graphs",
+        "They cannot process large networks"
+      ],
+      "answer": 1,
+      "explanation": "The primary challenge in evaluating community detection algorithms is that the 'ground truth' communities are often unknown. Unlike supervised learning tasks with clear labels, it's often difficult to determine what the 'correct' community structure should be in real-world networks."
+    },
+    {
+      "question": "Which of the following is a common approach to address the cold start problem in recommender systems?",
+      "options": [
+        "Ignoring new users until they have sufficient history",
+        "Using graph-based approaches to infer preferences from similar users",
+        "Recommending only the most popular items to new users",
+        "Requiring users to complete extensive surveys before joining"
+      ],
+      "answer": 1,
+      "explanation": "Using graph-based approaches to infer preferences from similar users is a common approach to address the cold start problem. GNN-based recommender systems can leverage the graph structure to make recommendations for new users based on similar users' preferences, even without direct interaction history."
+    }
+  ]
+}
