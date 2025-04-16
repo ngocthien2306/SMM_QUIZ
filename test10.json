@@ -1,0 +1,269 @@
+{
+  "quizTitle": "Social Media Mining: Modern Applications and Case Studies",
+  "questions": [
+    {
+      "question": "How are Graph Neural Networks being applied to detect fraudulent reviews in e-commerce?",
+      "options": [
+        "By analyzing the text content of reviews using traditional NLP",
+        "By modeling relationships between users, products, and reviews to identify suspicious patterns",
+        "By comparing review scores with product prices",
+        "By tracking the time taken to write reviews"
+      ],
+      "answer": 1,
+      "explanation": "GNNs are applied to detect fraudulent reviews by modeling relationships between users, products, and reviews to identify suspicious patterns. This graph-based approach can detect coordinated behaviors such as groups of accounts that review the same products, use similar language, or show unusual temporal patterns."
+    },
+    {
+      "question": "In Professor Richard Tsai's course, what application of Graph Neural Networks is specifically highlighted for customs?",
+      "options": [
+        "Predicting shipping delays",
+        "Calculating import taxes",
+        "Customs fraud detection with limited labeled data",
+        "Tracking international shipments"
+      ],
+      "answer": 2,
+      "explanation": "In Professor Richard Tsai's course, customs fraud detection with limited labeled data is specifically highlighted as an application of Graph Neural Networks. The GraphFC system can identify suspicious import declarations even with just 5% labeled data by leveraging graph relationships."
+    },
+    {
+      "question": "How are GNNs being applied to improve recommender systems beyond traditional collaborative filtering?",
+      "options": [
+        "By simply matching users based on demographic information",
+        "By leveraging high-order connectivity in user-item graphs",
+        "By recommending only the most popular items",
+        "By analyzing user browsing times"
+      ],
+      "answer": 1,
+      "explanation": "GNNs improve recommender systems beyond traditional collaborative filtering by leveraging high-order connectivity in user-item graphs. This allows the model to capture complex patterns beyond direct interactions, considering paths connecting users through items they've both interacted with."
+    },
+    {
+      "question": "What is the primary advantage of using GCAN for fake news detection?",
+      "options": [
+        "It processes news articles faster than other methods",
+        "It uses graph-aware co-attention networks to model user interactions for explainable results",
+        "It requires less training data than other approaches",
+        "It only analyzes text content and ignores user behavior"
+      ],
+      "answer": 1,
+      "explanation": "The primary advantage of GCAN (Graph-aware Co-Attention Networks) for fake news detection is that it uses graph-aware co-attention networks to model user interactions for explainable results. This approach not only identifies fake news but also explains why by highlighting influential users and content features."
+    },
+    {
+      "question": "How is TextGCN improving text classification compared to traditional methods?",
+      "options": [
+        "By processing text faster",
+        "By modeling documents and words as nodes in a heterogeneous graph",
+        "By using larger vocabularies",
+        "By ignoring rare words completely"
+      ],
+      "answer": 1,
+      "explanation": "TextGCN improves text classification by modeling documents and words as nodes in a heterogeneous graph. This approach captures relationships between words (co-occurrence) and between words and documents (TF-IDF), allowing information to flow between related words and documents during learning."
+    },
+    {
+      "question": "What innovation does BERT-GCN introduce to text classification?",
+      "options": [
+        "It eliminates the need for labeled data",
+        "It combines BERT's contextual document embeddings with graph-based learning",
+        "It only works with very short texts",
+        "It translates text into multiple languages"
+      ],
+      "answer": 1,
+      "explanation": "BERT-GCN introduces the innovation of combining BERT's contextual document embeddings with graph-based learning for text classification. It initializes document nodes with BERT embeddings, then refines these representations using the document-word graph structure through GCN."
+    },
+    {
+      "question": "How are Graph Neural Networks being applied to tabular data with missing values?",
+      "options": [
+        "By simply removing rows with missing data",
+        "By only using complete columns",
+        "By modeling relationships between features and instances as a bipartite graph",
+        "By substituting average values"
+      ],
+      "answer": 2,
+      "explanation": "Graph Neural Networks are applied to tabular data with missing values by modeling relationships between features and instances as a bipartite graph. This approach allows information to flow between related entities during learning, enabling both effective imputation of missing values and improved prediction performance."
+    },
+    {
+      "question": "What is a key innovation in using GNNs for social network-based e-commerce?",
+      "options": [
+        "They only recommend products based on price",
+        "They ignore user behavior",
+        "They can detect fraudulent users based on unusual patterns of connectivity and synchronized activities",
+        "They only work with text descriptions"
+      ],
+      "answer": 2,
+      "explanation": "A key innovation in using GNNs for social network-based e-commerce is their ability to detect fraudulent users based on unusual patterns of connectivity and synchronized activities. By analyzing the structure of user-product interactions, GNNs can identify suspicious patterns such as fake reviews or coordinated buying behaviors."
+    },
+    {
+      "question": "According to the materials, how are Graph Neural Networks being combined with large language models?",
+      "options": [
+        "They aren't compatible technologies",
+        "By using document graphs and knowledge graphs during pre-training to address linkage and knowledge limitations",
+        "By replacing language models entirely",
+        "By translating text into graph formats"
+      ],
+      "answer": 1,
+      "explanation": "According to the materials, Graph Neural Networks are being combined with large language models by using document graphs and knowledge graphs during pre-training to address linkage and knowledge limitations. Models like LinkBERT and DRAGON incorporate graph structures to help language models better understand connections between documents and entities."
+    },
+    {
+      "question": "What application of Graph Neural Networks in bio-medicine is mentioned in the materials?",
+      "options": [
+        "Patient record management",
+        "Hospital staffing optimization",
+        "Protein-protein interaction networks and molecular property prediction",
+        "Medical billing automation"
+      ],
+      "answer": 2,
+      "explanation": "Protein-protein interaction networks and molecular property prediction are mentioned as applications of Graph Neural Networks in bio-medicine. These applications leverage the ability of GNNs to model relationships between biological entities and predict properties or interactions based on molecular structure."
+    },
+    {
+      "question": "How are modern Graph Neural Networks addressing the challenge of heterogeneous information in social media?",
+      "options": [
+        "By ignoring heterogeneous data",
+        "By converting all data to the same type",
+        "By using specialized architectures that handle different node and edge types",
+        "By analyzing each data type separately"
+      ],
+      "answer": 2,
+      "explanation": "Modern Graph Neural Networks address the challenge of heterogeneous information in social media by using specialized architectures that handle different node and edge types. Heterogeneous GNNs can process graphs with multiple entity types (users, posts, topics) and relationship types (authored, liked, followed) simultaneously."
+    },
+    {
+      "question": "What is the key benefit of self-supervised learning approaches for GNNs in social media mining?",
+      "options": [
+        "They require more computational resources",
+        "They don't need any data preprocessing",
+        "They can leverage unlabeled data through techniques like graph data augmentation",
+        "They always outperform supervised approaches"
+      ],
+      "answer": 2,
+      "explanation": "The key benefit of self-supervised learning approaches for GNNs in social media mining is that they can leverage unlabeled data through techniques like graph data augmentation. This is particularly valuable in social media where labeled data is often scarce but unlabeled structural data is abundant."
+    },
+    {
+      "question": "Based on the materials, what is a practical application of community detection algorithms in social media platforms?",
+      "options": [
+        "Determining server allocation",
+        "Setting user passwords",
+        "Identifying interest-based groups for targeted content and recommendations",
+        "Controlling data storage requirements"
+      ],
+      "answer": 2,
+      "explanation": "A practical application of community detection algorithms in social media platforms is identifying interest-based groups for targeted content and recommendations. By detecting communities of users with similar interests or behaviors, platforms can deliver more relevant content, recommendations, and advertising."
+    },
+    {
+      "question": "What practical challenge does the inductive capability of GraphSAGE address for social media platforms?",
+      "options": [
+        "The need to protect user privacy",
+        "The challenge of handling new users without retraining the entire model",
+        "The requirement to process images",
+        "The need to translate content into multiple languages"
+      ],
+      "answer": 1,
+      "explanation": "The inductive capability of GraphSAGE addresses the practical challenge of handling new users without retraining the entire model. Since social platforms constantly add new users, the ability to generate embeddings for previously unseen nodes 'on the fly' is crucial for keeping recommendations and analysis up-to-date."
+    },
+    {
+      "question": "How are temporal Graph Neural Networks addressing evolving social media networks?",
+      "options": [
+        "By ignoring temporal information",
+        "By only analyzing the most recent data",
+        "By modeling the evolution of user interactions and network structure over time",
+        "By predicting far-future events"
+      ],
+      "answer": 2,
+      "explanation": "Temporal Graph Neural Networks address evolving social media networks by modeling the evolution of user interactions and network structure over time. This allows them to capture how information spreads, how communities form and dissolve, and how user preferences change over time."
+    },
+    {
+      "question": "Which Graph Neural Network application has significant potential for improving public health communications?",
+      "options": [
+        "Friend recommendations",
+        "Content recommendation",
+        "Misinformation detection and intervention",
+        "Advertising targeting"
+      ],
+      "answer": 2,
+      "explanation": "Misinformation detection and intervention has significant potential for improving public health communications. By identifying false health claims and understanding how they spread through social networks, GNN-based systems could help combat health misinformation during public health crises."
+    },
+    {
+      "question": "According to the materials, what is a promising direction for GNNs in multilingual social media analysis?",
+      "options": [
+        "Replacing human translators entirely",
+        "Focusing only on English content",
+        "Transferring knowledge across languages using graph structures",
+        "Creating separate models for each language"
+      ],
+      "answer": 2,
+      "explanation": "A promising direction for GNNs in multilingual social media analysis is transferring knowledge across languages using graph structures. By leveraging multilingual knowledge graphs or cross-lingual user interactions, GNNs can help analyze content across language barriers, even for low-resource languages."
+    },
+    {
+      "question": "What ethical challenge is mentioned regarding the application of GNNs to social media data?",
+      "options": [
+        "They're too computationally expensive",
+        "Privacy concerns when modeling user relationships and behaviors",
+        "They're too difficult to implement",
+        "They require too much storage space"
+      ],
+      "answer": 1,
+      "explanation": "Privacy concerns when modeling user relationships and behaviors is mentioned as an ethical challenge in applying GNNs to social media data. Since graph-based approaches explicitly model connections between users and their activities, they raise important privacy questions that must be addressed in real-world applications."
+    },
+    {
+      "question": "How are GNNs being applied to influence maximization problems in social marketing?",
+      "options": [
+        "By selecting random users to target",
+        "By identifying optimal seed nodes that maximize information spread through the network",
+        "By focusing solely on users with the most followers",
+        "By ignoring network structure entirely"
+      ],
+      "answer": 1,
+      "explanation": "GNNs are being applied to influence maximization problems by identifying optimal seed nodes that maximize information spread through the network. Rather than simply targeting high-degree users, these approaches model the complex information diffusion process to find the most effective combination of users to initiate a campaign."
+    },
+    {
+      "question": "What novel application of GNNs for election monitoring is suggested in the materials?",
+      "options": [
+        "Predicting election outcomes",
+        "Monitoring campaign spending",
+        "Detecting coordinated inauthentic behavior and influence operations",
+        "Counting votes automatically"
+      ],
+      "answer": 2,
+      "explanation": "Detecting coordinated inauthentic behavior and influence operations is suggested as a novel application of GNNs for election monitoring. By analyzing patterns of connectivity and synchronized activities across accounts, GNNs can identify artificial amplification or manipulation attempts during electoral processes."
+    },
+    {
+      "question": "How might GNNs improve crisis response through social media analysis?",
+      "options": [
+        "By replacing emergency services",
+        "By predicting crises before they happen",
+        "By identifying real-time information needs and credible sources during disasters",
+        "By controlling user access during emergencies"
+      ],
+      "answer": 2,
+      "explanation": "GNNs might improve crisis response through social media analysis by identifying real-time information needs and credible sources during disasters. Graph-based approaches can help filter the overwhelming volume of crisis-related content, distinguish reliable information sources, and map affected areas based on geotagged posts and user relationships."
+    },
+    {
+      "question": "According to the presentation by Prof. Cheng-Te Li, what is a key advantage of using Graph ML in projects?",
+      "options": [
+        "It always produces faster results",
+        "It requires no data preprocessing",
+        "It provides the ability to incorporate both network structure and node features",
+        "It works with any programming language"
+      ],
+      "answer": 2,
+      "explanation": "According to Prof. Cheng-Te Li, a key advantage of using Graph ML in projects is the ability to incorporate both network structure and node features. This allows models to leverage both the relationships between entities and their individual attributes, leading to more powerful and accurate analysis."
+    },
+    {
+      "question": "What practical business value do GNNs offer for financial transaction monitoring?",
+      "options": [
+        "Automatically approving all transactions",
+        "Reducing transaction fees",
+        "Detecting fraud patterns by analyzing transaction networks",
+        "Eliminating the need for security measures"
+      ],
+      "answer": 2,
+      "explanation": "GNNs offer practical business value for financial transaction monitoring by detecting fraud patterns through analyzing transaction networks. By modeling relationships between accounts, transactions, and merchants, GNNs can identify suspicious patterns that might indicate fraud, money laundering, or other financial crimes."
+    },
+    {
+      "question": "Based on the materials, what is a promising future direction for combining GNNs with other AI techniques?",
+      "options": [
+        "Replacing all other AI approaches with GNNs",
+        "Using only GNNs for all tasks",
+        "Integrating GNNs with multimodal learning to process text, images, and network structure together",
+        "Abandoning deep learning entirely"
+      ],
+      "answer": 2,
+      "explanation": "A promising future direction mentioned in the materials is integrating GNNs with multimodal learning to process text, images, and network structure together. This combination could enable more comprehensive social media analysis that considers all aspects of content and interactions simultaneously."
+    }
+  ]
+}
