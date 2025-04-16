@@ -1,0 +1,280 @@
+{
+  "quizTitle": "Social Media Mining: GNN Applications and Advanced Concepts",
+  "questions": [
+    {
+      "question": "Which GNN approach is specifically mentioned for customs fraud detection?",
+      "options": [
+        "GCAN",
+        "TextGCN",
+        "GraphFC",
+        "BERT-GCN"
+      ],
+      "answer": 2,
+      "explanation": "GraphFC is specifically mentioned for customs fraud detection. It leverages graph structures to identify suspicious import declarations that might be attempting to evade proper customs duties."
+    },
+    {
+      "question": "What makes GNNs particularly effective for tabular data with missing values?",
+      "options": [
+        "They can predict missing values more accurately than traditional methods",
+        "They can function even when entire features are missing",
+        "They model relationships between instances and features as a graph structure",
+        "They require less computational resources than traditional imputation methods"
+      ],
+      "answer": 2,
+      "explanation": "GNNs are effective for tabular data with missing values because they model relationships between instances and features as a graph structure, allowing information to flow between related entities during learning to compensate for missing values."
+    },
+    {
+      "question": "In the context of fake news detection, what is the main advantage of using a GNN approach?",
+      "options": [
+        "It can process news articles faster than other approaches",
+        "It considers who is sharing the news, not just the content",
+        "It requires less training data than other approaches",
+        "It only works with text content and ignores images"
+      ],
+      "answer": 1,
+      "explanation": "In fake news detection, the main advantage of GNN approaches is that they consider who is sharing the news, not just the content. By examining the propagation patterns and user relationships, GNNs can identify suspicious sharing behaviors that are indicative of fake news."
+    },
+    {
+      "question": "What is LinkBERT designed to address?",
+      "options": [
+        "The inability of language models to process images",
+        "The high computational cost of transformer models",
+        "The lack of linkage between documents in language models",
+        "The limited vocabulary of standard language models"
+      ],
+      "answer": 2,
+      "explanation": "LinkBERT is designed to address the lack of linkage between documents in language models. Traditional language models process documents independently, missing important connections between related documents. LinkBERT uses document graphs during pretraining to help the model reason across related documents."
+    },
+    {
+      "question": "How does DRAGON improve language model pretraining?",
+      "options": [
+        "By incorporating audio data alongside text",
+        "By training with multilingual corpora",
+        "By combining text with knowledge graphs",
+        "By distilling knowledge from larger models"
+      ],
+      "answer": 2,
+      "explanation": "DRAGON improves language model pretraining by combining text with knowledge graphs. This joint pretraining helps the model develop better understanding of entities and their relationships, improving performance on knowledge-intensive tasks."
+    },
+    {
+      "question": "What is a key advantage of GraphSAGE over traditional GCNs?",
+      "options": [
+        "It uses less memory",
+        "It trains faster",
+        "It can generate embeddings for previously unseen nodes",
+        "It only works with homogeneous graphs"
+      ],
+      "answer": 2,
+      "explanation": "A key advantage of GraphSAGE over traditional GCNs is that it can generate embeddings for previously unseen nodes (inductive learning). GraphSAGE learns aggregation functions that can be applied to new nodes with their feature vectors, rather than learning specific embeddings for existing nodes."
+    },
+    {
+      "question": "In recommender systems using GNNs, what type of high-order information is leveraged?",
+      "options": [
+        "User demographic information",
+        "Content metadata",
+        "Paths connecting users through items they've both interacted with",
+        "Temporal patterns of user activity"
+      ],
+      "answer": 2,
+      "explanation": "In recommender systems using GNNs, high-order information leveraged includes paths connecting users through items they've both interacted with. These multi-hop connections in the user-item graph provide rich signal about potential recommendations beyond direct interactions."
+    },
+    {
+      "question": "What is a common data augmentation technique used in self-supervised GNNs for recommendation?",
+      "options": [
+        "Adding synthetic users and items",
+        "Edge dropout (randomly removing some connections)",
+        "Changing item attributes",
+        "Translating text descriptions"
+      ],
+      "answer": 1,
+      "explanation": "Edge dropout (randomly removing some connections) is a common data augmentation technique used in self-supervised GNNs for recommendation. Other mentioned techniques include node dropout and random wiring, all creating different views of the same graph for contrastive learning."
+    },
+    {
+      "question": "According to the materials, what are two main issues with current language models that can be addressed using graphs?",
+      "options": [
+        "Speed and memory usage",
+        "Multimodal processing and reasoning",
+        "Lack of linkage between documents and lack of knowledge between entities",
+        "Factual accuracy and ethical considerations"
+      ],
+      "answer": 2,
+      "explanation": "According to the materials, two main issues with current language models that can be addressed using graphs are the lack of linkage between documents and the lack of knowledge between entities. Graph-enhanced language models can better capture document relationships and entity knowledge."
+    },
+    {
+      "question": "In TextGCN, what is the purpose of connecting words to documents?",
+      "options": [
+        "To reduce computational complexity",
+        "To enable information flow between documents that share words",
+        "To enforce document classification constraints",
+        "To visualize the document collection"
+      ],
+      "answer": 1,
+      "explanation": "In TextGCN, connecting words to documents enables information flow between documents that share words. This allows the model to capture semantic relationships between documents even if they don't directly reference each other, improving text classification performance."
+    },
+    {
+      "question": "What is the key feature of Graph Attention Networks (GAT) compared to standard GCNs?",
+      "options": [
+        "They process graphs much faster",
+        "They use recurrent neural networks internally",
+        "They assign learned attention weights to different neighbors",
+        "They only work with directed graphs"
+      ],
+      "answer": 2,
+      "explanation": "The key feature of Graph Attention Networks (GAT) compared to standard GCNs is that they assign learned attention weights to different neighbors. This allows the model to focus on the most relevant connections for each node, rather than treating all neighbors equally."
+    },
+    {
+      "question": "According to the materials, what type of graph is used in e-commerce for bipartite graph representation?",
+      "options": [
+        "User-user social network",
+        "User-product interaction graph",
+        "Product-category taxonomy",
+        "Seller-buyer transaction network"
+      ],
+      "answer": 1,
+      "explanation": "According to the materials, user-product interaction graphs are used in e-commerce for bipartite graph representation. These graphs connect users to products they've interacted with (viewed, purchased, rated, etc.), enabling various applications including recommendation and fraud detection."
+    },
+    {
+      "question": "What is the main benefit of using Graph Neural Networks for community detection in social networks?",
+      "options": [
+        "They require less computational resources",
+        "They can leverage both network structure and node features simultaneously",
+        "They always find the globally optimal community structure",
+        "They only work with small networks"
+      ],
+      "answer": 1,
+      "explanation": "The main benefit of using GNNs for community detection is their ability to leverage both network structure (connections between users) and node features (user attributes, content, behavior) simultaneously. Traditional methods often use either structure or features, while GNNs naturally incorporate both."
+    },
+    {
+      "question": "In Professor Cheng-Te Li's slides, what is highlighted as the first step when bringing Graph ML into projects?",
+      "options": [
+        "Choosing a GNN architecture",
+        "Collecting large amounts of data",
+        "Defining what the data entities are as nodes",
+        "Training multiple models for comparison"
+      ],
+      "answer": 2,
+      "explanation": "In Professor Cheng-Te Li's slides, defining what the data entities are as nodes is highlighted as the first step when bringing Graph ML into projects. This fundamental decision determines how the problem will be formulated as a graph learning task."
+    },
+    {
+      "question": "According to the presented materials, what is a key advantage of Graph ML over traditional machine learning approaches?",
+      "options": [
+        "It requires less data",
+        "It's always faster to train",
+        "It incorporates relationships between samples rather than treating them as independent",
+        "It requires less feature engineering"
+      ],
+      "answer": 2,
+      "explanation": "A key advantage of Graph ML is that it incorporates relationships between samples rather than treating them as independent. Traditional ML often assumes independent and identically distributed (i.i.d.) data, while Graph ML explicitly models connections and dependencies between instances."
+    },
+    {
+      "question": "What is the main challenge described in applying GNNs to very large social networks?",
+      "options": [
+        "GNNs cannot handle directed edges",
+        "The computational complexity of processing the entire graph at once",
+        "Social networks change too rapidly for GNNs to be effective",
+        "GNNs require labeled data for all nodes"
+      ],
+      "answer": 1,
+      "explanation": "The main challenge in applying GNNs to very large social networks is the computational complexity of processing the entire graph at once. The memory requirements and computation time scale with graph size, necessitating sampling-based or cluster-based approaches for large-scale networks."
+    },
+    {
+      "question": "What technique is commonly used in GNNs to address over-smoothing issues in deep architectures?",
+      "options": [
+        "Using fewer layers",
+        "Adding residual connections",
+        "Increasing the learning rate",
+        "Removing node features"
+      ],
+      "answer": 1,
+      "explanation": "Adding residual connections is a technique commonly used in GNNs to address over-smoothing issues in deep architectures. These connections allow information from earlier layers to flow directly to later layers, helping preserve node feature distinctiveness even in deeper networks."
+    },
+    {
+      "question": "What is a key benefit of the inductivity capability in GNNs for social media applications?",
+      "options": [
+        "It allows processing of larger graphs",
+        "It improves accuracy on existing nodes",
+        "It enables handling new users without retraining the model",
+        "It reduces the need for node features"
+      ],
+      "answer": 2,
+      "explanation": "A key benefit of the inductivity capability in GNNs for social media applications is that it enables handling new users without retraining the model. Since social platforms constantly add new users, the ability to generate embeddings for previously unseen nodes 'on the fly' is crucial for practical applications."
+    },
+    {
+      "question": "According to the materials, what distinguishes heterogeneous graphs from homogeneous graphs?",
+      "options": [
+        "Heterogeneous graphs are always larger",
+        "Heterogeneous graphs have multiple types of nodes and edges",
+        "Heterogeneous graphs are always directed",
+        "Heterogeneous graphs always form communities"
+      ],
+      "answer": 1,
+      "explanation": "What distinguishes heterogeneous graphs from homogeneous graphs is that heterogeneous graphs have multiple types of nodes and edges. For example, a social media graph might include users, posts, hashtags, and locations as different node types with various relationship types between them."
+    },
+    {
+      "question": "In the context of GNNs for tabular data learning, what problem does TabGNN address?",
+      "options": [
+        "Classification with missing data",
+        "Feature selection in high-dimensional data",
+        "Time series forecasting",
+        "Outlier detection"
+      ],
+      "answer": 0,
+      "explanation": "In the context of GNNs for tabular data learning, TabGNN addresses classification with missing data. It uses a multiplex graph approach to model feature-wise instance correlations, helping to handle missing values and improve prediction performance."
+    },
+    {
+      "question": "What is the general message passing mechanism in GNNs?",
+      "options": [
+        "Sending binary signals between nodes",
+        "Aggregating feature information from neighboring nodes to update node representations",
+        "Broadcasting global graph information to all nodes",
+        "Calculating shortest paths between all node pairs"
+      ],
+      "answer": 1,
+      "explanation": "The general message passing mechanism in GNNs involves aggregating feature information from neighboring nodes to update node representations. This process allows nodes to gather information from their local neighborhood and, through multiple iterations, from increasingly larger parts of the graph."
+    },
+    {
+      "question": "In the context of social media analysis using GNNs, what is the primary advantage of graph-based methods over traditional text analysis?",
+      "options": [
+        "They process text faster",
+        "They require less training data",
+        "They incorporate relational information alongside content",
+        "They work better with short texts"
+      ],
+      "answer": 2,
+      "explanation": "In social media analysis using GNNs, the primary advantage of graph-based methods over traditional text analysis is that they incorporate relational information alongside content. This allows models to consider not just what is being said, but also who is saying it and how users interact with each other."
+    },
+    {
+      "question": "According to the materials, what are the three steps in transforming real-world problems into GNN-solvable tasks?",
+      "options": [
+        "Data collection, preprocessing, model training",
+        "Problem formulation, feature engineering, model selection",
+        "Extracting nodes and edges, defining the task type, training the GNN",
+        "Graph construction, feature selection, hyperparameter tuning"
+      ],
+      "answer": 2,
+      "explanation": "According to the materials, the three steps in transforming real-world problems into GNN-solvable tasks are: (1) extracting nodes and edges from the dataset, (2) defining the task type (node classification, link prediction, or graph classification), and (3) training the GNN model to solve the problem."
+    },
+    {
+      "question": "What is the main reason why GNNs are valuable for social media mining according to the presented materials?",
+      "options": [
+        "They require less data annotation",
+        "They process data faster than traditional methods",
+        "They can model both user behavior and network structure simultaneously",
+        "They produce more interpretable results"
+      ],
+      "answer": 2,
+      "explanation": "According to the presented materials, GNNs are valuable for social media mining because they can model both user behavior and network structure simultaneously. This holistic approach captures the rich interactions between content, users, and network topology that characterize social media platforms."
+    },
+    {
+      "question": "According to Professor Cheng-Te Li's presentation, what is the 'Take HOME' message about Graph ML's power?",
+      "options": [
+        "It's the fastest learning approach for social media data",
+        "It requires no feature engineering and connects the dots between samples",
+        "It works with any type of dataset without modification",
+        "It's the most accurate approach for all classification tasks"
+      ],
+      "answer": 1,
+      "explanation": "According to Professor Cheng-Te Li's presentation, the 'Take HOME' message about Graph ML's power is that it requires no feature engineering and connects the dots between samples. Rather than treating data points as independent, Graph ML leverages relationships between instances to improve learning performance."
+    }
+  ]
+}
