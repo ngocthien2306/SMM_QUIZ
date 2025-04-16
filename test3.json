@@ -1,0 +1,269 @@
+{
+  "quizTitle": "Social Media Mining: Network Models and Algorithms",
+  "questions": [
+    {
+      "question": "What is the main purpose of designing network models?",
+      "options": [
+        "To create visualizations of real-world networks",
+        "To compress the data of large networks",
+        "To generate graphs that are similar to real-world networks",
+        "To predict the future evolution of specific networks"
+      ],
+      "answer": 2,
+      "explanation": "The main purpose of designing network models is to generate graphs that are similar to real-world networks. These models help us understand the underlying principles of network formation and simulate networks with specific properties for research and analysis."
+    },
+    {
+      "question": "Which network model is characterized by nodes connecting randomly?",
+      "options": [
+        "Small-World Network",
+        "Random Graph",
+        "Scale-Free Network",
+        "Preferential Attachment Model"
+      ],
+      "answer": 1,
+      "explanation": "The Random Graph model is characterized by nodes connecting randomly. In this model, edges between nodes are formed with a fixed probability independent of other connections."
+    },
+    {
+      "question": "In the G(n,p) model of random graphs, what does p represent?",
+      "options": [
+        "The number of nodes",
+        "The number of edges",
+        "The probability that any of the possible edges is formed",
+        "The average degree of the graph"
+      ],
+      "answer": 2,
+      "explanation": "In the G(n,p) model of random graphs, p represents the probability that any of the possible edges is formed. Each potential edge exists with probability p, independent of all other edges."
+    },
+    {
+      "question": "What happens in random graphs as the probability p increases and reaches a threshold of around 1/(n-1)?",
+      "options": [
+        "The graph becomes completely connected",
+        "The diameter of the graph starts to increase rapidly",
+        "A large connected component (Giant Component) starts to appear",
+        "The clustering coefficient becomes very high"
+      ],
+      "answer": 2,
+      "explanation": "As the probability p increases and reaches a threshold of around 1/(n-1) in random graphs, a large connected component (the Giant Component) starts to appear. This is known as a phase transition, and at this point, the average degree c = 1."
+    },
+    {
+      "question": "What type of degree distribution do random graphs generate?",
+      "options": [
+        "Power-law distribution",
+        "Uniform distribution",
+        "Poisson distribution",
+        "Exponential distribution"
+      ],
+      "answer": 2,
+      "explanation": "Random graphs generate a Poisson degree distribution, where most nodes have degrees close to the average, and the probability of finding nodes with degrees far from the average decreases exponentially."
+    },
+    {
+      "question": "Which property of real-world networks is accurately modeled by random graphs?",
+      "options": [
+        "High clustering coefficient",
+        "Power-law degree distribution",
+        "Small average path length",
+        "Community structure"
+      ],
+      "answer": 2,
+      "explanation": "Random graphs accurately model the small average path length property of real-world networks. They generate networks where the average distance between nodes scales logarithmically with the number of nodes, similar to real-world networks."
+    },
+    {
+      "question": "What is a network with a power-law degree distribution called?",
+      "options": [
+        "Small-World Network",
+        "Random Graph",
+        "Scale-Free Network",
+        "Regular Lattice"
+      ],
+      "answer": 2,
+      "explanation": "A network with a power-law degree distribution is called a Scale-Free Network. In these networks, the probability of finding a node with degree k is proportional to k^(-b), where b is typically between 2 and 3."
+    },
+    {
+      "question": "The Watts-Strogatz model aims to exhibit which two properties of real-world networks?",
+      "options": [
+        "Power-law degree distribution and low average path length",
+        "High average path length and low clustering coefficient",
+        "Short average path length and high clustering coefficient",
+        "Uniform degree distribution and high reciprocity"
+      ],
+      "answer": 2,
+      "explanation": "The Watts-Strogatz model (Small-World Model) aims to exhibit short average path lengths and high clustering coefficients, two important properties observed in real-world networks that random graphs cannot simultaneously model."
+    },
+    {
+      "question": "How does the Small-World model (Watts-Strogatz) create networks?",
+      "options": [
+        "By randomly connecting nodes with a fixed probability",
+        "By starting with a regular lattice and rewiring some connections randomly",
+        "By adding new nodes that preferentially attach to existing high-degree nodes",
+        "By creating complete subgraphs and connecting them"
+      ],
+      "answer": 1,
+      "explanation": "The Small-World model creates networks by starting with a regular lattice and rewiring some connections randomly. The parameter β controls the probability of rewiring and allows the model to interpolate between a regular lattice and a random graph."
+    },
+    {
+      "question": "What is the main principle behind the Preferential Attachment model?",
+      "options": [
+        "Nodes connect randomly to other nodes",
+        "New nodes are more likely to connect to existing nodes with high degree",
+        "Nodes connect to others based on physical proximity",
+        "All nodes have equal probabilities of receiving new connections"
+      ],
+      "answer": 1,
+      "explanation": "The main principle behind the Preferential Attachment model is that new nodes are more likely to connect to existing nodes with high degree. This 'rich-get-richer' mechanism leads to the formation of scale-free networks with power-law degree distributions."
+    },
+    {
+      "question": "Which algorithm is commonly used for graph traversal and uses a queue data structure?",
+      "options": [
+        "Depth-First Search (DFS)",
+        "Dijkstra's Algorithm",
+        "Breadth-First Search (BFS)",
+        "Prim's Algorithm"
+      ],
+      "answer": 2,
+      "explanation": "Breadth-First Search (BFS) is a graph traversal algorithm that uses a queue data structure. It explores a graph by visiting all neighbors of a node before moving to the next level neighbors, making it efficient for finding shortest paths in unweighted graphs."
+    },
+    {
+      "question": "Which algorithm is commonly used for graph traversal and uses a stack data structure?",
+      "options": [
+        "Breadth-First Search (BFS)",
+        "Heap sort",
+        "Depth-First Search (DFS)",
+        "Hash table lookup"
+      ],
+      "answer": 2,
+      "explanation": "Depth-First Search (DFS) is a graph traversal algorithm that uses a stack data structure. It explores as far as possible along a branch before backtracking, making it useful for tasks like finding connected components or detecting cycles."
+    },
+    {
+      "question": "Which algorithm is used to find the shortest paths from a single source node to all other nodes in a weighted graph with non-negative edges?",
+      "options": [
+        "BFS",
+        "DFS",
+        "Dijkstra's Algorithm",
+        "Prim's Algorithm"
+      ],
+      "answer": 2,
+      "explanation": "Dijkstra's Algorithm is used to find the shortest paths from a single source node to all other nodes in a weighted graph with non-negative edges. It greedily selects the unvisited node with the smallest tentative distance."
+    },
+    {
+      "question": "Which algorithm is used to find the Minimum Spanning Tree in a weighted connected graph?",
+      "options": [
+        "Dijkstra's Algorithm",
+        "Ford-Fulkerson Algorithm",
+        "Prim's Algorithm",
+        "BFS"
+      ],
+      "answer": 2,
+      "explanation": "Prim's Algorithm is used to find the Minimum Spanning Tree in a weighted connected graph. It grows the spanning tree by always adding the lowest-weight edge that connects a node in the tree to a node outside the tree."
+    },
+    {
+      "question": "What does Milgram's small-world experiment demonstrate about social networks?",
+      "options": [
+        "They have a high clustering coefficient",
+        "They follow a power-law degree distribution",
+        "They have a small average path length ('six degrees of separation')",
+        "They form highly isolated communities"
+      ],
+      "answer": 2,
+      "explanation": "Milgram's small-world experiment demonstrates that social networks have a small average path length, popularizing the concept of 'six degrees of separation'. The experiment showed that people could reach a target stranger through an average of about six intermediate acquaintances."
+    },
+    {
+      "question": "In a flow network, what does the capacity c(u,v) of an edge (u,v) define?",
+      "options": [
+        "The current flow through the edge",
+        "The maximum flow that can pass through the edge",
+        "The cost of sending flow through the edge",
+        "The residual capacity of the edge"
+      ],
+      "answer": 1,
+      "explanation": "In a flow network, the capacity c(u,v) of an edge (u,v) defines the maximum flow that can pass through the edge. Flow values must not exceed this capacity constraint."
+    },
+    {
+      "question": "The Ford-Fulkerson algorithm is used for solving what problem in graph theory?",
+      "options": [
+        "Finding the shortest path",
+        "Computing the minimum spanning tree",
+        "Determining the maximum flow in a network",
+        "Detecting communities"
+      ],
+      "answer": 2,
+      "explanation": "The Ford-Fulkerson algorithm is used for solving the maximum flow problem in graph theory. It iteratively finds augmenting paths through the residual network and increases the flow until no path from source to sink with available capacity remains."
+    },
+    {
+      "question": "What is the time complexity of Dijkstra's algorithm with a priority queue implementation?",
+      "options": [
+        "O(V)",
+        "O(V + E)",
+        "O(E log V)",
+        "O(V^2)"
+      ],
+      "answer": 2,
+      "explanation": "The time complexity of Dijkstra's algorithm with a priority queue implementation is O(E log V), where E is the number of edges and V is the number of vertices (nodes). This makes it efficient for sparse graphs."
+    },
+    {
+      "question": "What problem can be solved using the maximum bipartite matching algorithm?",
+      "options": [
+        "Finding the shortest path between two nodes",
+        "Determining the maximum number of node pairs that can be matched without sharing endpoints",
+        "Calculating the clustering coefficient",
+        "Identifying communities in a network"
+      ],
+      "answer": 1,
+      "explanation": "The maximum bipartite matching algorithm solves the problem of determining the maximum number of node pairs that can be matched without sharing endpoints in a bipartite graph. Applications include assignment problems like matching users to items or jobs to workers."
+    },
+    {
+      "question": "What is a 'bridge' in graph theory?",
+      "options": [
+        "A node with high betweenness centrality",
+        "An edge whose removal would increase the number of connected components",
+        "A path connecting two communities",
+        "A node that connects two otherwise disconnected components"
+      ],
+      "answer": 1,
+      "explanation": "In graph theory, a 'bridge' is an edge whose removal would increase the number of connected components in the graph. Bridges are critical connections that, if removed, would disconnect parts of the network."
+    },
+    {
+      "question": "What is the key difference between a tree and a general graph?",
+      "options": [
+        "Trees have more edges than nodes",
+        "Trees are always directed",
+        "Trees have no cycles and exactly one path between any two nodes",
+        "Trees cannot have more than 10 nodes"
+      ],
+      "answer": 2,
+      "explanation": "The key difference between a tree and a general graph is that trees have no cycles and exactly one path between any two nodes. A tree with n nodes always has exactly n-1 edges."
+    },
+    {
+      "question": "In a min-cut max-flow problem, what is the relationship between the maximum flow and the minimum cut?",
+      "options": [
+        "The maximum flow is always larger than the minimum cut",
+        "The maximum flow value equals the capacity of the minimum cut",
+        "They are unrelated concepts",
+        "The minimum cut is always twice the maximum flow"
+      ],
+      "answer": 1,
+      "explanation": "In a min-cut max-flow problem, the maximum flow value equals the capacity of the minimum cut. This is known as the Max-Flow Min-Cut Theorem, a fundamental result in network flow theory."
+    },
+    {
+      "question": "What algorithm is typically used to detect strongly connected components in a directed graph?",
+      "options": [
+        "Breadth-First Search",
+        "Dijkstra's Algorithm",
+        "Kosaraju's Algorithm or Tarjan's Algorithm",
+        "Prim's Algorithm"
+      ],
+      "answer": 2,
+      "explanation": "Kosaraju's Algorithm or Tarjan's Algorithm is typically used to detect strongly connected components in a directed graph. These algorithms efficiently find sets of nodes where there is a path from each node to every other node in the set."
+    },
+    {
+      "question": "What happens to the clustering coefficient in the Watts-Strogatz model as the rewiring probability increases from 0 to 1?",
+      "options": [
+        "It increases linearly",
+        "It remains constant",
+        "It decreases gradually",
+        "It increases exponentially"
+      ],
+      "answer": 2,
+      "explanation": "As the rewiring probability increases from 0 to 1 in the Watts-Strogatz model, the clustering coefficient decreases gradually. It starts high (like a regular lattice) and decreases toward the lower values characteristic of random graphs."
+    }
+  ]
+}
