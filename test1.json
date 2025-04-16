@@ -1,279 +1,280 @@
 {
-    "questions": [
-      {
-        "question": "What is social media mining?",
-        "options": [
-          "Extracting data from social media platforms for marketing purposes",
-          "The process of representing, analyzing, and extracting actionable patterns from social media data",
-          "Building social media applications using data-driven approaches",
-          "Monitoring social media activities of competitors"
-        ],
-        "answer": 1,
-        "explanation": "Social Media Mining is defined as the process of representing, analyzing, and extracting actionable patterns from social media data."
-      },
-      {
-        "question": "Which of the following is NOT a grand challenge of social media mining?",
-        "options": [
-          "Big Data Paradox",
-          "Noise Removal Fallacy",
-          "Evaluation Dilemma",
-          "Content Generation Challenge"
-        ],
-        "answer": 3,
-        "explanation": "Content Generation Challenge is not mentioned as one of the grand challenges of social media mining. The main challenges discussed are the Big Data Paradox, Obtaining Sufficient Samples, Noise Removal Fallacy, and Evaluation Dilemma."
-      },
-      {
-        "question": "What does the 'Big Data Paradox' refer to in social media mining?",
-        "options": [
-          "The challenge of processing extremely large datasets efficiently",
-          "The contradiction between having massive social data but little information for specific individuals",
-          "The paradox of big data having many errors despite large sample sizes",
-          "The challenge of analyzing structured vs. unstructured data"
-        ],
-        "answer": 1,
-        "explanation": "The 'Big Data Paradox' refers to the contradiction that while social media data is undoubtedly big, when we focus on specific individuals, we often have little data for each one."
-      },
-      {
-        "question": "In graph theory, what does the degree of a node represent in a social network context?",
-        "options": [
-          "The importance or influence of a person in the network",
-          "The number of connections (friends/followers) a person has",
-          "The distance between two people in the network",
-          "The clustering coefficient of the person's social circle"
-        ],
-        "answer": 1,
-        "explanation": "In graph theory, the degree of a node represents the number of edges connected to that node. In a social network context, this translates to the number of connections (friends or followers) a person has."
-      },
-      {
-        "question": "What is the mathematical relationship between the sum of degrees and the number of edges in an undirected graph?",
-        "options": [
-          "The sum of degrees equals the number of edges",
-          "The sum of degrees equals twice the number of edges",
-          "The sum of degrees is independent of the number of edges",
-          "The sum of degrees equals the number of edges plus the number of nodes"
-        ],
-        "answer": 1,
-        "explanation": "In any undirected graph, the summation of all node degrees is equal to twice the number of edges, mathematically expressed as ∑d_i = 2|E|."
-      },
-      {
-        "question": "What is a power-law degree distribution in the context of social networks?",
-        "options": [
-          "When all nodes have approximately the same number of connections",
-          "When the network follows a normal distribution of connections",
-          "When there are many nodes with few connections and few nodes with many connections",
-          "When the network has a uniform distribution of connections"
-        ],
-        "answer": 2,
-        "explanation": "A power-law degree distribution describes networks where there exist many nodes with few connections and a handful of nodes with very large numbers of connections."
-      },
-      {
-        "question": "What is PageRank centrality used for?",
-        "options": [
-          "Measuring how many pages a website has",
-          "Ranking web pages in search engine results based on their importance",
-          "Determining the loading time of web pages",
-          "Calculating the number of outgoing links from a page"
-        ],
-        "answer": 1,
-        "explanation": "PageRank centrality is a measure used to rank web pages in search engine results based on their importance. It was developed by Google and considers both the quantity and quality of links to a page."
-      },
-      {
-        "question": "Which centrality measure is based on the number of shortest paths passing through a node?",
-        "options": [
-          "Degree centrality",
-          "Eigenvector centrality",
-          "Closeness centrality",
-          "Betweenness centrality"
-        ],
-        "answer": 3,
-        "explanation": "Betweenness centrality measures the importance of a node by calculating how many shortest paths between other nodes pass through it, identifying nodes that act as bridges in the network."
-      },
-      {
-        "question": "What is the clustering coefficient in a network?",
-        "options": [
-          "A measure of how densely connected the overall network is",
-          "The probability that two nodes will form a connection",
-          "A measure of the tendency of nodes to cluster together in groups",
-          "The number of clusters identified in the network"
-        ],
-        "answer": 2,
-        "explanation": "The clustering coefficient measures the tendency of nodes to cluster together in groups. It quantifies the transitivity in the network, or how likely it is that a friend of my friend is also my friend."
-      },
-      {
-        "question": "In the context of network measures, what does 'transitivity' refer to?",
-        "options": [
-          "The property that all nodes can reach other nodes",
-          "The tendency for nodes to form triangles (if A connects to B and B connects to C, then A also connects to C)",
-          "The transferring of information across a network",
-          "The property of networks to change over time"
-        ],
-        "answer": 1,
-        "explanation": "Transitivity refers to the tendency for nodes to form triangles in a network. It's often summarized as 'a friend of my friend is my friend.'"
-      },
-      {
-        "question": "Which of the following is NOT a property consistently observed in real-world social networks?",
-        "options": [
-          "Power-law degree distribution",
-          "High clustering coefficient",
-          "Small average path length",
-          "Equal distribution of connections among all nodes"
-        ],
-        "answer": 3,
-        "explanation": "Equal distribution of connections among all nodes is NOT a property of real-world social networks. Instead, real-world networks typically show a power-law degree distribution (many nodes with few connections, few with many connections)."
-      },
-      {
-        "question": "What is the main premise of the preferential attachment model (Barabási-Albert model)?",
-        "options": [
-          "New nodes connect to existing nodes randomly",
-          "New nodes connect preferentially to nodes that already have many connections",
-          "New nodes connect only to nodes within their community",
-          "New nodes connect to nodes based on geographical proximity"
-        ],
-        "answer": 1,
-        "explanation": "The preferential attachment model assumes that when new nodes are added to networks, they are more likely to connect to existing nodes that many others have already connected to—a 'rich-get-richer' phenomenon."
-      },
-      {
-        "question": "What is the small-world phenomenon in network theory?",
-        "options": [
-          "The theory that social networks only exist within small, localized communities",
-          "The observation that most nodes in a network can be reached from any other node in a small number of steps",
-          "The tendency for small networks to grow exponentially over time",
-          "The discovery that small networks have different properties than large networks"
-        ],
-        "answer": 1,
-        "explanation": "The small-world phenomenon refers to the observation that most nodes in a network can be reached from any other node in a small number of steps, despite the network's potentially large size (often summarized as 'six degrees of separation')."
-      },
-      {
-        "question": "What happens at the 'phase transition' point in random graph evolution?",
-        "options": [
-          "The graph becomes completely connected",
-          "The graph becomes disconnected into separate components",
-          "A giant component appears and the diameter begins to shrink",
-          "All nodes reach their maximum possible degree"
-        ],
-        "answer": 2,
-        "explanation": "At the phase transition point in random graph evolution, a giant component starts to appear and the diameter, which just reached its maximum value, begins to decrease."
-      },
-      {
-        "question": "What is the primary difference between a random graph model and a small-world model?",
-        "options": [
-          "Random graphs have no structure, while small-world models have a regular structure with some random connections",
-          "Random graphs are always disconnected, while small-world models are always connected",
-          "Random graphs have a high clustering coefficient, while small-world models have a low clustering coefficient",
-          "Random graphs have a large diameter, while small-world models have a small diameter"
-        ],
-        "answer": 0,
-        "explanation": "The primary difference is that random graphs assume connections are formed completely randomly, while small-world models start with a regular structure and then introduce some randomness through rewiring, maintaining both high clustering and short paths."
-      },
-      {
-        "question": "What are Graph Neural Networks (GNNs) primarily designed to do?",
-        "options": [
-          "Generate new random graphs that mimic real-world networks",
-          "Learn representations of graph-structured data through neighborhood aggregation",
-          "Convert graphs into tabular data for traditional machine learning",
-          "Simplify complex networks into more manageable structures"
-        ],
-        "answer": 1,
-        "explanation": "Graph Neural Networks (GNNs) are designed to learn representations of graph-structured data by aggregating information from node neighborhoods, enabling the model to understand the relationships and patterns in the graph."
-      },
-      {
-        "question": "What capability makes GNNs particularly useful compared to traditional neural networks when working with graphs?",
-        "options": [
-          "They have fewer parameters to train",
-          "They can process much larger datasets",
-          "They can generate predictions for new, previously unseen nodes (inductive capability)",
-          "They only need to be trained once for all possible graph structures"
-        ],
-        "answer": 2,
-        "explanation": "GNNs have inductive capability, meaning they can generalize to new, previously unseen nodes or even entirely new graphs. This is because they share parameters across nodes and learn general patterns of neighborhood aggregation."
-      },
-      {
-        "question": "What is the vectorization process in data mining?",
-        "options": [
-          "The process of representing nodes as vectors in a graph",
-          "The process of converting non-tabular data (like text) into numerical feature vectors",
-          "The process of plotting data points in a vector space",
-          "The process of accelerating computations using vector operations"
-        ],
-        "answer": 1,
-        "explanation": "Vectorization is the process of converting non-tabular data (such as text documents) into numerical feature vectors that can be processed by data mining algorithms."
-      },
-      {
-        "question": "What is TF-IDF commonly used for in social media mining?",
-        "options": [
-          "Measuring the transitivity of social networks",
-          "Weighting terms in documents to identify important keywords",
-          "Classifying users based on their influence",
-          "Detecting communities in social graphs"
-        ],
-        "answer": 1,
-        "explanation": "TF-IDF (Term Frequency-Inverse Document Frequency) is commonly used for weighting terms in documents to identify important keywords. It assigns higher weights to words that are frequent in a specific document but rare across all documents."
-      },
-      {
-        "question": "Which of the following is NOT a typical data preprocessing task in data mining?",
-        "options": [
-          "Aggregation",
-          "Discretization",
-          "Feature selection",
-          "Classification"
-        ],
-        "answer": 3,
-        "explanation": "Classification is not a preprocessing task but rather a data mining algorithm category (supervised learning). Preprocessing tasks include aggregation, discretization, feature selection, feature extraction, and sampling."
-      },
-      {
-        "question": "What is a primary application of Graph Neural Networks in recommendation systems?",
-        "options": [
-          "Generating new product descriptions",
-          "Predicting prices of recommended items",
-          "Modeling user-item interactions as graph connections to make better recommendations",
-          "Optimizing the user interface for recommendation display"
-        ],
-        "answer": 2,
-        "explanation": "A primary application of GNNs in recommendation systems is modeling user-item interactions as graph connections, allowing the system to leverage both the content information and the graph structure to make better recommendations."
-      },
-      {
-        "question": "What is the key difference between supervised and unsupervised learning?",
-        "options": [
-          "Supervised learning requires more computational resources",
-          "Supervised learning uses labeled data while unsupervised learning uses unlabeled data",
-          "Supervised learning works only with numerical data",
-          "Unsupervised learning can only be applied to small datasets"
-        ],
-        "answer": 1,
-        "explanation": "The key difference is that supervised learning uses labeled data (where the target/class values are known) to train a model, while unsupervised learning works with unlabeled data to find patterns or groupings without predefined target values."
-      },
-      {
-        "question": "In the context of text mining for social media, what is an advantage of combining GNNs with Language Models?",
-        "options": [
-          "It reduces the computational cost of processing text",
-          "It eliminates the need for data preprocessing",
-          "It allows the model to capture both the semantic content and the relational context between documents",
-          "It guarantees 100% accuracy in sentiment analysis"
-        ],
-        "answer": 2,
-        "explanation": "Combining GNNs with Language Models allows the model to capture both the semantic content (through LMs) and the relational context between documents (through GNNs), addressing limitations of traditional LMs that process documents independently."
-      },
-      {
-        "question": "What key challenge does fraud detection in social media typically face?",
-        "options": [
-          "Limited computational resources",
-          "Highly imbalanced data (few fraudulent examples compared to normal examples)",
-          "Lack of historical data",
-          "Too many features to consider"
-        ],
-        "answer": 1,
-        "explanation": "Fraud detection in social media typically faces the challenge of highly imbalanced data, where fraudulent examples are significantly fewer than normal examples, making it difficult for models to learn the patterns of fraudulent behavior."
-      },
-      {
-        "question": "When evaluating clustering in unsupervised learning, what does the silhouette index measure?",
-        "options": [
-          "The runtime efficiency of the clustering algorithm",
-          "The optimal number of clusters for a given dataset",
-          "How well instances fit within their assigned clusters compared to other clusters",
-          "The similarity between different clustering algorithm results"
-        ],
-        "answer": 2,
-        "explanation": "The silhouette index measures how well instances fit within their assigned clusters compared to other clusters. It combines both cohesiveness (how close instances are to others in the same cluster) and separateness (how far they are from instances in other clusters)."
-      }
-    ]
-  }
+  "quizTitle": "Social Media Mining: Graph Basics",
+  "questions": [
+    {
+      "question": "What are the basic components of a graph?",
+      "options": [
+        "Points and lines",
+        "Actors and relationships",
+        "Nodes and edges",
+        "Vertices and arcs"
+      ],
+      "answer": 2,
+      "explanation": "The basic components of a graph are nodes and edges. Nodes represent entities and edges represent the relationships between these entities."
+    },
+    {
+      "question": "In graph theory, what do nodes typically represent?",
+      "options": [
+        "Connections",
+        "Paths",
+        "Entities",
+        "Distances"
+      ],
+      "answer": 2,
+      "explanation": "In graph theory, nodes typically represent entities, such as people, locations, websites, or any other objects that can have relationships with one another."
+    },
+    {
+      "question": "In a social network, what do edges typically represent?",
+      "options": [
+        "Geographical locations",
+        "Shared interests",
+        "Relationships",
+        "Chronological order"
+      ],
+      "answer": 2,
+      "explanation": "In a social network, edges typically represent relationships between entities, such as friendship connections, follower relationships, or interactions between users."
+    },
+    {
+      "question": "What is another common name for a node in a graph?",
+      "options": [
+        "Edge",
+        "Graph",
+        "Vertex",
+        "Network"
+      ],
+      "answer": 2,
+      "explanation": "Another common name for a node is a vertex. Both terms refer to the same concept in graph theory - an entity in the graph."
+    },
+    {
+      "question": "What is another common name for an edge in a social network?",
+      "options": [
+        "Node",
+        "Subgraph",
+        "Tie",
+        "Degree"
+      ],
+      "answer": 2,
+      "explanation": "Another common name for an edge in a social network is a tie. This term is often used in social network analysis to represent relationships or connections between actors."
+    },
+    {
+      "question": "What are edges in a directed graph called?",
+      "options": [
+        "Undirected edges",
+        "Weighted edges",
+        "Arcs",
+        "Loops"
+      ],
+      "answer": 2,
+      "explanation": "Edges in a directed graph are called arcs. An arc has a direction, indicating that the relationship goes from one node to another but not necessarily in the reverse direction."
+    },
+    {
+      "question": "In an undirected graph, an edge indicates that the relationship between nodes is?",
+      "options": [
+        "One-way",
+        "Weighted",
+        "Mutual",
+        "Time-dependent"
+      ],
+      "answer": 2,
+      "explanation": "In an undirected graph, an edge indicates that the relationship between nodes is mutual, meaning it goes both ways. There is no direction associated with the relationship."
+    },
+    {
+      "question": "A graph with weighted edges is called what?",
+      "options": [
+        "Simple graph",
+        "Multigraph",
+        "Weighted graph",
+        "Directed graph"
+      ],
+      "answer": 2,
+      "explanation": "A graph where edges have weights (values associated with them) is called a weighted graph. These weights can represent distances, costs, or strengths of relationships."
+    },
+    {
+      "question": "What is the size of a graph typically measured by?",
+      "options": [
+        "The number of nodes",
+        "The number of edges",
+        "The sum of nodes and edges",
+        "The density of the graph"
+      ],
+      "answer": 0,
+      "explanation": "The size of a graph is typically measured by the number of nodes it contains. This is denoted as |V| in mathematical notation."
+    },
+    {
+      "question": "The length of the shortest path between two nodes is called?",
+      "options": [
+        "Diameter",
+        "Distance",
+        "Connectivity",
+        "Centrality"
+      ],
+      "answer": 1,
+      "explanation": "The length of the shortest path between two nodes is called the distance between those nodes. It represents the minimum number of edges that must be traversed to go from one node to the other."
+    },
+    {
+      "question": "The length of the longest shortest path between any pair of nodes in a graph is called?",
+      "options": [
+        "Radius",
+        "Diameter",
+        "Perimeter",
+        "Density"
+      ],
+      "answer": 1,
+      "explanation": "The diameter of a graph is the length of the longest shortest path between any pair of nodes. It represents the maximum distance between any two nodes in the graph."
+    },
+    {
+      "question": "An edge whose removal increases the number of connected components in a graph is called a?",
+      "options": [
+        "Loop",
+        "Path",
+        "Bridge",
+        "Shortcut"
+      ],
+      "answer": 2,
+      "explanation": "An edge whose removal increases the number of connected components in a graph is called a bridge. Bridges are critical connections that, if removed, would disconnect parts of the graph."
+    },
+    {
+      "question": "In an undirected graph, the number of edges connected to a node is called the node's?",
+      "options": [
+        "Centrality",
+        "Degree",
+        "Neighborhood",
+        "Path length"
+      ],
+      "answer": 1,
+      "explanation": "In an undirected graph, the number of edges connected to a node is called the node's degree. This is a basic measure of how connected a node is within the graph."
+    },
+    {
+      "question": "In a directed graph, the number of edges pointing towards a node is called the node's?",
+      "options": [
+        "Out-degree",
+        "Total degree",
+        "In-degree",
+        "Connectivity degree"
+      ],
+      "answer": 2,
+      "explanation": "In a directed graph, the number of edges pointing towards a node is called the node's in-degree. It represents how many other nodes have connections directed at this node."
+    },
+    {
+      "question": "In a directed graph, the number of edges pointing away from a node is called the node's?",
+      "options": [
+        "In-degree",
+        "Total degree",
+        "Out-degree",
+        "Connectivity degree"
+      ],
+      "answer": 2,
+      "explanation": "In a directed graph, the number of edges pointing away from a node is called the node's out-degree. It represents how many connections the node directs toward other nodes."
+    },
+    {
+      "question": "An undirected graph with no cycles and exactly one path between any two nodes is called a?",
+      "options": [
+        "Complete graph",
+        "Tree",
+        "Cycle graph",
+        "Star graph"
+      ],
+      "answer": 1,
+      "explanation": "An undirected graph with no cycles and exactly one path between any two nodes is called a tree. Trees are connected acyclic graphs that have n-1 edges for n nodes."
+    },
+    {
+      "question": "A graph in which all possible edges exist is called a?",
+      "options": [
+        "Sparse graph",
+        "Complete graph",
+        "Connected graph",
+        "Regular graph"
+      ],
+      "answer": 1,
+      "explanation": "A graph in which all possible edges exist is called a complete graph. In a complete graph with n nodes, every node is connected to every other node, resulting in n(n-1)/2 edges."
+    },
+    {
+      "question": "A graph whose nodes can be divided into two disjoint sets such that every edge connects a node in one set to one in the other is called a?",
+      "options": [
+        "Planar graph",
+        "Bipartite graph",
+        "Directed acyclic graph",
+        "Line graph"
+      ],
+      "answer": 1,
+      "explanation": "A graph whose nodes can be divided into two disjoint sets such that every edge connects a node in one set to one in the other is called a bipartite graph. Examples include user-item networks in recommendation systems."
+    },
+    {
+      "question": "Which of the following is a way to represent a graph?",
+      "options": [
+        "Matrix factorization",
+        "Adjacency matrix",
+        "Feature engineering",
+        "Time series analysis"
+      ],
+      "answer": 1,
+      "explanation": "An adjacency matrix is a common way to represent a graph. It's an n×n matrix where n is the number of nodes, and each cell (i,j) indicates whether there is an edge between nodes i and j."
+    },
+    {
+      "question": "In an adjacency matrix, if there is an edge between node i and node j, the corresponding element in the matrix is typically?",
+      "options": [
+        "0",
+        "-1",
+        "1",
+        "Infinity"
+      ],
+      "answer": 2,
+      "explanation": "In an adjacency matrix, if there is an edge between node i and node j, the corresponding element (i,j) in the matrix is typically 1. If there is no edge, the value is 0."
+    },
+    {
+      "question": "The adjacency matrices of social media networks are usually?",
+      "options": [
+        "Dense",
+        "Symmetric",
+        "Sparse",
+        "Non-binary"
+      ],
+      "answer": 2,
+      "explanation": "The adjacency matrices of social media networks are usually sparse, meaning most elements are zero. This is because most users are connected to only a small fraction of all users in the network."
+    },
+    {
+      "question": "A graph representation that maintains a list of all the nodes that each node is connected to is called a(n)?",
+      "options": [
+        "Adjacency matrix",
+        "Adjacency list",
+        "Edge list",
+        "Graph embedding"
+      ],
+      "answer": 1,
+      "explanation": "A graph representation that maintains a list of all the nodes that each node is connected to is called an adjacency list. For each node, it stores a list of its neighboring nodes."
+    },
+    {
+      "question": "A graph representation in which each element is an edge and is usually represented as a pair of connected nodes is called a(n)?",
+      "options": [
+        "Adjacency matrix",
+        "Adjacency list",
+        "Edge list",
+        "Graph convolution"
+      ],
+      "answer": 2,
+      "explanation": "A graph representation in which each element is an edge and is usually represented as a pair of connected nodes is called an edge list. It simply lists all the edges in the graph as pairs of nodes."
+    },
+    {
+      "question": "In social network analysis, the network focused on a focal actor (ego) and a set of alters who have ties with the ego is called a(n)?",
+      "options": [
+        "Global network",
+        "Community network",
+        "Egocentric network",
+        "Random network"
+      ],
+      "answer": 2,
+      "explanation": "In social network analysis, the network focused on a focal actor (ego) and a set of alters who have ties with the ego is called an egocentric network. It examines the local network structure around a specific individual."
+    },
+    {
+      "question": "A graph in which all nodes have the same degree is called a?",
+      "options": [
+        "Complete graph",
+        "Bipartite graph",
+        "Regular graph",
+        "Connected graph"
+      ],
+      "answer": 2,
+      "explanation": "A graph in which all nodes have the same degree is called a regular graph. If each node has degree k, it's called a k-regular graph."
+    }
+  ]
+}
