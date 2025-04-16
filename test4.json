@@ -1,0 +1,280 @@
+{
+  "quizTitle": "Social Media Mining: Graph Neural Networks and Applications",
+  "questions": [
+    {
+      "question": "What are the three primary types of tasks that Graph Neural Networks (GNNs) mainly handle?",
+      "options": [
+        "Feature extraction, pattern recognition, statistical analysis",
+        "Node classification, link prediction, graph classification",
+        "Clustering, dimensionality reduction, anomaly detection",
+        "Sentiment analysis, topic modeling, text summarization"
+      ],
+      "answer": 1,
+      "explanation": "GNNs mainly handle three primary task types: node classification (predicting node labels), link prediction (predicting edge existence), and graph classification (predicting labels for entire graphs)."
+    },
+    {
+      "question": "Predicting the category of each node in a graph is which task of GNNs?",
+      "options": [
+        "Link prediction",
+        "Node classification",
+        "Graph classification",
+        "Graph embedding"
+      ],
+      "answer": 1,
+      "explanation": "Predicting the category of each node in a graph is a node classification task. Examples include predicting whether a user is a bot or human, or categorizing papers in a citation network."
+    },
+    {
+      "question": "Predicting whether there is an edge between two nodes in a graph is which task of GNNs?",
+      "options": [
+        "Node classification",
+        "Graph classification",
+        "Link prediction",
+        "Community detection"
+      ],
+      "answer": 2,
+      "explanation": "Predicting whether there is an edge between two nodes is a link prediction task. This is useful for applications like friend recommendations or predicting interactions between users and items."
+    },
+    {
+      "question": "Predicting the category of the entire graph is which task of GNNs?",
+      "options": [
+        "Node classification",
+        "Link prediction",
+        "Graph classification",
+        "Graph representation learning"
+      ],
+      "answer": 2,
+      "explanation": "Predicting the category of the entire graph is a graph classification task. Examples include determining whether a molecular graph represents a toxic compound or identifying if a group of users forms a fraud network."
+    },
+    {
+      "question": "What is the first and most important step in transforming problems into GNN tasks?",
+      "options": [
+        "Defining node classification tasks",
+        "Defining link prediction tasks",
+        "Extracting nodes and edges from the dataset",
+        "Choosing the appropriate GNN architecture"
+      ],
+      "answer": 2,
+      "explanation": "The first and most important step in transforming problems into GNN tasks is extracting nodes and edges from the dataset. This involves identifying what elements in your problem should be represented as nodes and what relationships should be represented as edges."
+    },
+    {
+      "question": "In the simplified example of using a GNN to detect fake news, each piece of news or post is considered a?",
+      "options": [
+        "Edge",
+        "Node",
+        "Graph",
+        "Feature"
+      ],
+      "answer": 1,
+      "explanation": "In the simplified fake news detection example, each piece of news or post is considered a node in the graph. These nodes are then connected to user nodes who interact with the news."
+    },
+    {
+      "question": "In the simplified example of using a GNN to detect fake news, if a user shares, likes, or comments on a piece of news, what is created between the user and that news item?",
+      "options": [
+        "A node",
+        "An edge",
+        "A graph",
+        "A label"
+      ],
+      "answer": 1,
+      "explanation": "If a user shares, likes, or comments on a piece of news, an edge is created between the user node and the news node. These interactions form the structure of the graph used for fake news detection."
+    },
+    {
+      "question": "What is a key capability of GNNs due to shared parameters on the same layer?",
+      "options": [
+        "Ability to handle only small graphs",
+        "Provide inductive and transfer learning capabilities",
+        "Limited ability to generalize to unseen nodes",
+        "Requirement of retraining for new graphs"
+      ],
+      "answer": 1,
+      "explanation": "A key capability of GNNs due to shared parameters on the same layer is that they provide inductive and transfer learning capabilities. This allows GNNs to generalize to unseen nodes and even entirely new graphs."
+    },
+    {
+      "question": "What does the inductivity capability of GNNs allow them to do with new nodes?",
+      "options": [
+        "Only classify them based on existing node features",
+        "Only predict links to existing nodes",
+        "Generate new embeddings 'on the fly'",
+        "Ignore them during analysis"
+      ],
+      "answer": 2,
+      "explanation": "The inductivity capability of GNNs allows them to generate new embeddings 'on the fly' for previously unseen nodes. This is particularly useful in dynamic social networks where new users constantly join."
+    },
+    {
+      "question": "What GNN variation is described as a slight variation on neighborhood aggregation with per-neighbor normalization?",
+      "options": [
+        "GraphSage",
+        "Graph Convolutional Networks (GCN)",
+        "LightGCN",
+        "BERT-GCN"
+      ],
+      "answer": 1,
+      "explanation": "Graph Convolutional Networks (GCN) are described as a slight variation on neighborhood aggregation with per-neighbor normalization. GCN normalizes the contribution of each neighbor based on node degrees."
+    },
+    {
+      "question": "Which of the following is NOT mentioned as an aggregation function option in GraphSage?",
+      "options": [
+        "Mean",
+        "Max",
+        "LSTM",
+        "Median"
+      ],
+      "answer": 3,
+      "explanation": "Median is not mentioned as an aggregation function option in GraphSage. The paper mentions Mean, Max, and LSTM as possible aggregation functions to combine neighborhood information."
+    },
+    {
+      "question": "What is the core idea behind a Graph Neural Network's update of node representations?",
+      "options": [
+        "Randomly assigning new features to nodes",
+        "Directly using node features without considering connections",
+        "Repeatedly transforming and aggregating neighboring node representations",
+        "Focusing only on the global properties of the graph"
+      ],
+      "answer": 2,
+      "explanation": "The core idea behind a GNN's update of node representations is repeatedly transforming and aggregating neighboring node representations. This message-passing framework allows nodes to incorporate information from their local neighborhood and, through multiple iterations, from increasingly larger areas of the graph."
+    },
+    {
+      "question": "Which GNN application leverages high-order connectivity to revisit Collaborative Filtering (CF)?",
+      "options": [
+        "Fraud Detection",
+        "Tabular Data Learning",
+        "Recommender Systems",
+        "Text Classification"
+      ],
+      "answer": 2,
+      "explanation": "Recommender Systems leverages high-order connectivity to revisit Collaborative Filtering (CF). By modeling user-item interactions as a bipartite graph, GNNs can capture higher-order connectivity patterns beyond direct interactions."
+    },
+    {
+      "question": "What are the two main steps in LightGCN for Collaborative Filtering mentioned in the source?",
+      "options": [
+        "Feature extraction and model training",
+        "Representation aggregation layers and Readout layer",
+        "Graph construction and embedding generation",
+        "Loss calculation and model optimization"
+      ],
+      "answer": 1,
+      "explanation": "The two main steps in LightGCN for Collaborative Filtering are representation aggregation layers and a readout layer. The representation aggregation layers update node embeddings by aggregating information from neighbors, and the readout layer combines embeddings from different layers."
+    },
+    {
+      "question": "What is a common technique used in self-supervised GNNs for Recommender Systems?",
+      "options": [
+        "Label smoothing",
+        "Graph Data Augmentation",
+        "Transfer learning from other domains",
+        "Ensemble methods"
+      ],
+      "answer": 1,
+      "explanation": "Graph Data Augmentation is a common technique used in self-supervised GNNs for Recommender Systems. This includes methods like edge dropout, node dropout, and random wiring to create different views of the same graph for contrastive learning."
+    },
+    {
+      "question": "Feature Imputation and Label Prediction are mentioned in the context of which problem?",
+      "options": [
+        "Cold Start Problem in Recommender Systems",
+        "The Missing Data Problem",
+        "Overfitting in Graph Neural Networks",
+        "Scalability of Graph Algorithms"
+      ],
+      "answer": 1,
+      "explanation": "Feature Imputation and Label Prediction are mentioned in the context of the Missing Data Problem. GNNs can be effective at handling datasets with missing feature values by leveraging the graph structure and relationships between instances."
+    },
+    {
+      "question": "Which type of GNN is specifically mentioned for handling missing data in tabular data?",
+      "options": [
+        "Convolutional GNNs",
+        "Recurrent GNNs",
+        "Bipartite GNNs",
+        "Generative GNNs"
+      ],
+      "answer": 2,
+      "explanation": "Bipartite GNNs are specifically mentioned for handling missing data in tabular data. They model the relationship between instances and features as a bipartite graph, allowing information to flow between them during the learning process."
+    },
+    {
+      "question": "GraphFC is a GNN model designed for what application?",
+      "options": [
+        "Social Network Analysis",
+        "Natural Language Processing",
+        "Customs Fraud Detection",
+        "Medical Diagnosis"
+      ],
+      "answer": 2,
+      "explanation": "GraphFC is a GNN model designed for Customs Fraud Detection. It leverages graph structure to identify suspicious import declarations that might be attempting to evade proper customs duties."
+    },
+    {
+      "question": "What type of graph is typically used for fraud detection on e-commerce platforms according to the source?",
+      "options": [
+        "Homogeneous Graph",
+        "Directed Acyclic Graph",
+        "User-product bipartite graphs",
+        "Knowledge Graph"
+      ],
+      "answer": 2,
+      "explanation": "User-product bipartite graphs are typically used for fraud detection on e-commerce platforms. These graphs connect users to products they've interacted with, allowing the detection of suspicious patterns in review or purchasing behavior."
+    },
+    {
+      "question": "In TextGCN, what do the nodes and edges represent?",
+      "options": [
+        "Nodes: Sentences, Edges: Semantic similarity",
+        "Nodes: Authors, Edges: Co-authorship",
+        "Nodes: words and documents, Edges: co-occurrence (word-word) and TF-IDF (word-doc)",
+        "Nodes: Topics, Edges: Hierarchical relationships"
+      ],
+      "answer": 2,
+      "explanation": "In TextGCN, nodes represent words and documents, while edges represent co-occurrence relationships between words and TF-IDF relationships between words and documents. This graph structure allows information to flow between related words and documents during learning."
+    },
+    {
+      "question": "BERT-GCN combines BERT with GCN for what task?",
+      "options": [
+        "Machine Translation",
+        "Sentiment Analysis",
+        "Text Classification",
+        "Text Generation"
+      ],
+      "answer": 2,
+      "explanation": "BERT-GCN combines BERT with GCN for Text Classification. It leverages BERT's powerful text representations as initialization for document nodes in the graph, then uses GCN to refine these representations using the document-word graph structure."
+    },
+    {
+      "question": "GCAN is a graph-aware co-attention network designed for what purpose on social media?",
+      "options": [
+        "User Recommendation",
+        "Topic Modeling",
+        "Explainable Fake News Detection",
+        "Sentiment Analysis"
+      ],
+      "answer": 2,
+      "explanation": "GCAN (Graph-aware Co-Attention Networks) is designed for Explainable Fake News Detection on social media. It models user interactions and provides explanations for its predictions by highlighting influential users and content features."
+    },
+    {
+      "question": "What is a key challenge for current Language Models (LMs) that can be addressed by incorporating graphs?",
+      "options": [
+        "Difficulty in understanding short texts",
+        "Lack of linkage between documents",
+        "Inability to handle multiple languages",
+        "High computational cost for training"
+      ],
+      "answer": 1,
+      "explanation": "A key challenge for current Language Models (LMs) that can be addressed by incorporating graphs is the lack of linkage between documents. Traditional LMs treat documents independently, missing important connections and relationships between them."
+    },
+    {
+      "question": "How does LinkBERT aim to address the lack of linkage between documents in LMs?",
+      "options": [
+        "By incorporating user interaction graphs",
+        "By focusing on individual document content more deeply",
+        "By pretraining Language Models with Document Links",
+        "By using a different transformer architecture"
+      ],
+      "answer": 2,
+      "explanation": "LinkBERT aims to address the lack of linkage between documents by pretraining Language Models with Document Links. It incorporates document graph structures during pretraining to help the model reason across related documents."
+    },
+    {
+      "question": "DRAGON is a model that combines text and what else for Language Model Pre-Training?",
+      "options": [
+        "Image Data",
+        "Audio Features",
+        "Knowledge Graph",
+        "Time Series Data"
+      ],
+      "answer": 2,
+      "explanation": "DRAGON combines text and Knowledge Graphs for Language Model Pre-Training. This joint pretraining helps the model develop a better understanding of entities and their relationships, improving performance on knowledge-intensive tasks."
+    }
+  ]
+}
