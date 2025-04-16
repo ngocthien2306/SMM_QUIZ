@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Mining Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .quiz-container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #444;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .question-block {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .question-number {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #4a90e2;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .options {
+            margin-bottom: 15px;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        .selected {
+            background-color: #e0e8f0;
+            border-color: #4a90e2;
+        }
+        .correct {
+            background-color: #d4edda;
+            border-color: #28a745;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+        }
+        .controls {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        button {
+            padding: 12px 24px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+        button:hover {
+            background-color: #3a80d2;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .explanation {
+            background-color: #e8f4fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            border-left: 4px solid #4a90e2;
+            display: none;
+        }
+        .quiz-select {
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+        .results-container {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            display: none;
+        }
+        .score {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .loading {
+            text-align: center;
+            padding: 30px;
+            font-size: 18px;
+            color: #666;
+        }
+        .feedback-message {
+            color: #dc3545;
+            font-weight: bold;
+            margin-top: 5px;
+            display: none;
+        }
+        .timer-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+            display: none;
+        }
+        .timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background-color: #f8f9fa;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+        }
+        .timer.warning {
+            color: #ff9800;
+            background-color: #fff3e0;
+        }
+        .timer.danger {
+            color: #dc3545;
+            background-color: #f8d7da;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .start-quiz-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #28a745;
+        }
+        .page-content {
+            padding-top: 60px; /* Space for fixed timer */
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-container" id="timer-container">
+        <div class="timer" id="timer">25:00</div>
+    </div>
+    
+    <div class="page-content">
+        <h1>Social Media Mining Quiz</h1>
+        
+        <div class="quiz-select">
+            <label for="quiz-selector">Select Quiz:</label>
+            <select id="quiz-selector">
+                <option value="">-- Select a Quiz --</option>
+                <!-- Options will be added dynamically -->
+            </select>
+        </div>
+        
+        <button id="start-quiz-btn" class="start-quiz-btn" style="display: none;">Start Quiz (25 Minutes)</button>
+        
+        <div class="loading" id="loading">
+            Select a quiz from the dropdown to begin.
+        </div>
+        
+        <div class="quiz-container" id="quiz-container" style="display: none;">
+            <div id="questions-container">
+                <!-- Questions will be inserted here -->
+            </div>
+            
+            <div class="controls">
+                <button id="submit-btn">Submit Quiz</button>
+            </div>
+            
+            <div class="results-container" id="results-container">
+                <div class="score" id="score"></div>
+                <div id="score-details"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM elements
+        const quizSelector = document.getElementById('quiz-selector');
+        const questionsContainer = document.getElementById('questions-container');
+        const submitBtn = document.getElementById('submit-btn');
+        const resultsContainer = document.getElementById('results-container');
+        const scoreElement = document.getElementById('score');
+        const scoreDetailsElement = document.getElementById('score-details');
+        const loadingElement = document.getElementById('loading');
+        const quizContainer = document.getElementById('quiz-container');
+        const timerContainer = document.getElementById('timer-container');
+        const timerElement = document.getElementById('timer');
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        
+        // Initialize variables
+        let userAnswers = [];
+        let quizData = null;
+        let timerInterval = null;
+        let timeLeft = 25 * 60; // 25 minutes in seconds
+        let quizStarted = false;
+        
+        // Populate quiz selector with 25 quizzes
+        for (let i = 1; i <= 25; i++) {
+            const option = document.createElement('option');
+            option.value = `test${i}`;
+            option.textContent = `Quiz ${i}`;
+            quizSelector.appendChild(option);
+        }
+        
+        // Load quiz data when quiz is selected
+        quizSelector.addEventListener('change', async () => {
+            if (!quizSelector.value) return;
+            
+            // Reset UI
+            resetQuiz();
+            
+            // Reset timer
+            timeLeft = 25 * 60;
+            updateTimerDisplay();
+            
+            // Show loading
+            loadingElement.textContent = 'Loading quiz...';
+            loadingElement.style.display = 'block';
+            
+            try {
+                // Fetch quiz data from GitHub
+                const response = await fetch(`https://raw.githubusercontent.com/ngocthien2306/SMM_QUIZ/develop/${quizSelector.value}.json`);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load quiz: ${response.status}`);
+                }
+                
+                quizData = await response.json();
+                
+                // Initialize user answers array
+                userAnswers = new Array(quizData.questions.length).fill(null);
+                
+                // Display quiz (but don't show it yet)
+                displayQuiz(quizData);
+                
+                // Hide loading, show start button
+                loadingElement.style.display = 'none';
+                startQuizBtn.style.display = 'block';
+            } catch (error) {
+                console.error('Error loading quiz:', error);
+                loadingElement.textContent = 'Error loading quiz. Please try again.';
+            }
+        });
+        
+        // Start quiz button
+        startQuizBtn.addEventListener('click', () => {
+            // Hide start button
+            startQuizBtn.style.display = 'none';
+            
+            // Show quiz and timer
+            quizContainer.style.display = 'block';
+            timerContainer.style.display = 'block';
+            
+            // Start timer
+            startTimer();
+            
+            // Set quiz as started
+            quizStarted = true;
+        });
+        
+        // Start the countdown timer
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    handleTimeUp();
+                }
+            }, 1000);
+        }
+        
+        // Update timer display
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Add warning classes based on time left
+            timerElement.classList.remove('warning', 'danger');
+            if (timeLeft <= 60) { // Last minute
+                timerElement.classList.add('danger');
+            } else if (timeLeft <= 300) { // Last 5 minutes
+                timerElement.classList.add('warning');
+            }
+        }
+        
+        // Handle when time is up
+        function handleTimeUp() {
+            // Auto-submit the quiz
+            submitQuiz(true);
+            alert('Time is up! Your quiz has been automatically submitted.');
+        }
+        
+        // Reset quiz state
+        function resetQuiz() {
+            questionsContainer.innerHTML = '';
+            resultsContainer.style.display = 'none';
+            quizContainer.style.display = 'none';
+            timerContainer.style.display = 'none';
+            startQuizBtn.style.display = 'none';
+            submitBtn.disabled = false;
+            clearInterval(timerInterval);
+            quizStarted = false;
+        }
+        
+        // Display all questions
+        function displayQuiz(quizData) {
+            questionsContainer.innerHTML = '';
+            
+            quizData.questions.forEach((questionData, index) => {
+                const questionBlock = document.createElement('div');
+                questionBlock.className = 'question-block';
+                
+                const questionElement = document.createElement('div');
+                questionElement.className = 'question-text';
+                questionElement.innerHTML = `<span class="question-number">${index + 1}.</span> ${questionData.question}`;
+                questionBlock.appendChild(questionElement);
+                
+                const optionsContainer = document.createElement('div');
+                optionsContainer.className = 'options';
+                
+                // Add feedback message element
+                const feedbackMessage = document.createElement('div');
+                feedbackMessage.className = 'feedback-message';
+                feedbackMessage.textContent = 'Please select an answer.';
+                feedbackMessage.style.display = 'none';
+                
+                questionData.options.forEach((option, optionIndex) => {
+                    const optionElement = document.createElement('div');
+                    optionElement.className = 'option';
+                    optionElement.textContent = option;
+                    optionElement.dataset.index = optionIndex;
+                    optionElement.dataset.questionIndex = index;
+                    
+                    optionElement.addEventListener('click', () => {
+                        // Remove selection from all options in this question
+                        optionsContainer.querySelectorAll('.option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        
+                        // Add selected class to clicked option
+                        optionElement.classList.add('selected');
+                        
+                        // Update user answers
+                        userAnswers[index] = optionIndex;
+                        
+                        // Hide feedback message
+                        feedbackMessage.style.display = 'none';
+                    });
+                    
+                    optionsContainer.appendChild(optionElement);
+                });
+                
+                questionBlock.appendChild(optionsContainer);
+                questionBlock.appendChild(feedbackMessage);
+                
+                // Create explanation element (hidden initially)
+                const explanationElement = document.createElement('div');
+                explanationElement.className = 'explanation';
+                explanationElement.textContent = questionData.explanation;
+                questionBlock.appendChild(explanationElement);
+                
+                questionsContainer.appendChild(questionBlock);
+            });
+        }
+        
+        // Handle submit
+        submitBtn.addEventListener('click', () => {
+            submitQuiz(false);
+        });
+        
+        // Submit quiz function
+        function submitQuiz(isAutoSubmit) {
+            // Check if all questions have been answered
+            const unansweredQuestions = userAnswers.reduce((acc, answer, index) => {
+                if (answer === null) acc.push(index);
+                return acc;
+            }, []);
+            
+            if (!isAutoSubmit && unansweredQuestions.length > 0) {
+                // Show feedback messages for unanswered questions
+                unansweredQuestions.forEach(index => {
+                    const questionBlock = questionsContainer.children[index];
+                    const feedbackMessage = questionBlock.querySelector('.feedback-message');
+                    feedbackMessage.style.display = 'block';
+                    
+                    // Scroll to first unanswered question
+                    if (index === unansweredQuestions[0]) {
+                        questionBlock.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+                return;
+            }
+            
+            // Stop timer
+            clearInterval(timerInterval);
+            
+            // Calculate score
+            let correctAnswers = 0;
+            
+            userAnswers.forEach((answer, index) => {
+                const questionBlock = questionsContainer.children[index];
+                const options = questionBlock.querySelectorAll('.option');
+                const correctAnswer = quizData.questions[index].answer;
+                const explanation = questionBlock.querySelector('.explanation');
+                
+                // Show explanation
+                explanation.style.display = 'block';
+                
+                // Clear previous classes
+                options.forEach(option => {
+                    option.classList.remove('correct', 'incorrect');
+                });
+                
+                // Highlight correct answers
+                options[correctAnswer].classList.add('correct');
+                
+                // If user answered
+                if (answer !== null) {
+                    // Check if correct and highlight
+                    if (answer === correctAnswer) {
+                        correctAnswers++;
+                    } else {
+                        options[answer].classList.add('incorrect');
+                    }
+                } else {
+                    // No answer was selected for this question
+                }
+            });
+            
+            // Show results
+            const percentage = Math.round((correctAnswers / quizData.questions.length) * 100);
+            const timeUsed = 25 * 60 - timeLeft;
+            const minutes = Math.floor(timeUsed / 60);
+            const seconds = timeUsed % 60;
+            
+            scoreElement.textContent = `Your Score: ${correctAnswers}/${quizData.questions.length} (${percentage}%)`;
+            
+            let resultMessage;
+            if (percentage >= 90) {
+                resultMessage = "Excellent! You have a strong understanding of Social Media Mining.";
+            } else if (percentage >= 70) {
+                resultMessage = "Good job! You have a solid grasp of the material.";
+            } else if (percentage >= 50) {
+                resultMessage = "You're making progress! Review the areas where you made mistakes.";
+            } else {
+                resultMessage = "Keep studying! Review the material and try again.";
+            }
+            
+            resultMessage += `\nTime used: ${minutes} minutes and ${seconds} seconds.`;
+            
+            scoreDetailsElement.textContent = resultMessage;
+            resultsContainer.style.display = 'block';
+            resultsContainer.scrollIntoView({ behavior: 'smooth' });
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            
+            // Keep timer visible but stop it
+            timerElement.textContent = "00:00";
+        }
+    </script>
+</body>
+</html>
