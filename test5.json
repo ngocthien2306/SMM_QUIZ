@@ -1,0 +1,280 @@
+{
+  "quizTitle": "Social Media Mining: Data Mining and Applications",
+  "questions": [
+    {
+      "question": "The process of transforming raw social media data into actionable insights is called?",
+      "options": [
+        "Feature engineering",
+        "Data mining",
+        "Machine learning",
+        "Network analysis"
+      ],
+      "answer": 1,
+      "explanation": "Data mining is the process of transforming raw social media data into actionable insights. It involves analyzing large amounts of data to discover patterns and extract knowledge."
+    },
+    {
+      "question": "The process of converting raw data into meaningful features for analysis is called?",
+      "options": [
+        "Pattern recognition",
+        "Statistical analysis",
+        "Feature extraction",
+        "Data cleaning"
+      ],
+      "answer": 2,
+      "explanation": "Feature extraction is the process of converting raw data into meaningful features for analysis. It involves selecting or creating relevant attributes from raw data that can be used in data mining algorithms."
+    },
+    {
+      "question": "The process of identifying trends, anomalies, and hidden patterns within large datasets is called?",
+      "options": [
+        "Feature extraction",
+        "Statistical analysis",
+        "Pattern recognition",
+        "Data visualization"
+      ],
+      "answer": 2,
+      "explanation": "Pattern recognition is the process of identifying trends, anomalies, and hidden patterns within large datasets. It allows analysts to discover meaningful insights from complex data."
+    },
+    {
+      "question": "The process of utilizing statistical tools to validate findings and ensure robustness is called?",
+      "options": [
+        "Data mining",
+        "Feature engineering",
+        "Pattern recognition",
+        "Statistical analysis"
+      ],
+      "answer": 3,
+      "explanation": "Statistical analysis is the process of utilizing statistical tools to validate findings and ensure robustness. It helps ensure that patterns discovered are statistically significant and not due to random chance."
+    },
+    {
+      "question": "How do Large Language Models (LLMs) enhance social media mining?",
+      "options": [
+        "By building graph structures",
+        "By processing and understanding vast amounts of text",
+        "By performing network analysis",
+        "By extracting nodes and edges"
+      ],
+      "answer": 1,
+      "explanation": "Large Language Models (LLMs) enhance social media mining by processing and understanding vast amounts of text. They can analyze textual content at scale, understanding context, tone, and nuances in user-generated content."
+    },
+    {
+      "question": "What can LLMs understand in social media posts?",
+      "options": [
+        "Only keywords",
+        "Only topics",
+        "Context, tone, and nuance",
+        "Only links and mentions"
+      ],
+      "answer": 2,
+      "explanation": "LLMs can understand context, tone, and nuance in social media posts. They go beyond simple keyword matching to grasp the meaning, sentiment, and subtle implications in text."
+    },
+    {
+      "question": "What can LLMs assist in generating in social media mining?",
+      "options": [
+        "Raw data",
+        "Graph layouts",
+        "Summaries of discussions and insights",
+        "Network metrics"
+      ],
+      "answer": 2,
+      "explanation": "LLMs can assist in generating summaries of discussions and insights in social media mining. They can condense large volumes of social media conversations into meaningful summaries and extract key insights from the data."
+    },
+    {
+      "question": "By leveraging LLMs, it is possible to perform detailed?",
+      "options": [
+        "Network structure analysis",
+        "Sentiment and topic analysis",
+        "Centrality measure calculations",
+        "Community detection algorithms"
+      ],
+      "answer": 1,
+      "explanation": "By leveraging LLMs, it is possible to perform detailed sentiment and topic analysis. LLMs excel at understanding emotions and identifying topics in text, making them valuable for analyzing user opinions and discussions on social media."
+    },
+    {
+      "question": "What is the Knowledge Discovery in Databases (KDD) process?",
+      "options": [
+        "A method for graph visualization",
+        "A technique for compressing large datasets",
+        "The process of extracting useful patterns from raw data",
+        "A framework for social network analysis"
+      ],
+      "answer": 2,
+      "explanation": "The Knowledge Discovery in Databases (KDD) process is the process of extracting useful patterns from raw data. It includes steps such as data selection, preprocessing, transformation, data mining, and interpretation/evaluation of results."
+    },
+    {
+      "question": "In the context of social media mining, what is vectorization?",
+      "options": [
+        "Creating visual representations of networks",
+        "The process of converting textual data into numerical vectors",
+        "Calculating the direction of information flow",
+        "Measuring the velocity of content spread"
+      ],
+      "answer": 1,
+      "explanation": "In the context of social media mining, vectorization is the process of converting textual data into numerical vectors. This transformation allows text to be processed by data mining algorithms that require numerical input."
+    },
+    {
+      "question": "What is TF-IDF used for in social media mining?",
+      "options": [
+        "Detecting trending topics",
+        "Measuring network density",
+        "Weighting terms in text documents based on their importance",
+        "Calculating user influence scores"
+      ],
+      "answer": 2,
+      "explanation": "TF-IDF (Term Frequency-Inverse Document Frequency) is used for weighting terms in text documents based on their importance. It assigns higher weights to terms that are frequent in a document but rare across the corpus, helping identify distinctive terms in social media content."
+    },
+    {
+      "question": "Which of the following is NOT a common data quality issue in social media data?",
+      "options": [
+        "Noise",
+        "Outliers",
+        "Missing values",
+        "Excessive precision"
+      ],
+      "answer": 3,
+      "explanation": "Excessive precision is not a common data quality issue in social media data. The typical issues include noise (irrelevant or distorted data), outliers (unusual observations), missing values (incomplete information), and duplicate data (repeated entries)."
+    },
+    {
+      "question": "What is the purpose of sampling in social media mining?",
+      "options": [
+        "To introduce randomness into the dataset",
+        "To reduce the computational cost of processing large datasets",
+        "To increase the size of small datasets",
+        "To eliminate outliers"
+      ],
+      "answer": 1,
+      "explanation": "The purpose of sampling in social media mining is to reduce the computational cost of processing large datasets. By analyzing a representative subset of the data, researchers can make inferences about the full dataset while using fewer computational resources."
+    },
+    {
+      "question": "What is stratified sampling in the context of social media analysis?",
+      "options": [
+        "Selecting data from specific time periods",
+        "Dividing the dataset into multiple bins and selecting fixed numbers from each bin",
+        "Sampling only the most influential users",
+        "Collecting data from different social media platforms"
+      ],
+      "answer": 1,
+      "explanation": "Stratified sampling in social media analysis involves dividing the dataset into multiple bins and selecting fixed numbers from each bin. This technique ensures that important subgroups within the data are properly represented in the sample."
+    },
+    {
+      "question": "What is the main difference between supervised and unsupervised learning in social media mining?",
+      "options": [
+        "Supervised learning requires more data than unsupervised learning",
+        "Supervised learning uses labeled data while unsupervised learning does not",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning is only used for text data"
+      ],
+      "answer": 1,
+      "explanation": "The main difference between supervised and unsupervised learning is that supervised learning uses labeled data where the class attribute values are known, while unsupervised learning works with unlabeled data. Supervised learning predicts specific outcomes, while unsupervised learning finds patterns and structures in the data."
+    },
+    {
+      "question": "What is classification in the context of data mining?",
+      "options": [
+        "The process of organizing data into folders",
+        "Predicting a discrete class attribute based on features",
+        "Grouping similar data points without predefined labels",
+        "Ranking data points by importance"
+      ],
+      "answer": 1,
+      "explanation": "Classification in data mining is the process of predicting a discrete class attribute based on features. It involves building a model from labeled training data that can assign appropriate categories to new, unlabeled instances."
+    },
+    {
+      "question": "What is regression in the context of data mining?",
+      "options": [
+        "Finding relationships between variables in historical data",
+        "Predicting a continuous numerical value based on features",
+        "Reverting data to a previous state",
+        "Reducing the dimensionality of data"
+      ],
+      "answer": 1,
+      "explanation": "Regression in data mining is the process of predicting a continuous numerical value based on features. Unlike classification, which predicts discrete categories, regression estimates real-valued outputs such as prices, temperatures, or probabilities."
+    },
+    {
+      "question": "What is a decision tree in data mining?",
+      "options": [
+        "A visualization technique for hierarchical data",
+        "A flowchart-like model that makes decisions based on feature values",
+        "A method for organizing files on a computer",
+        "A technique for generating random numbers"
+      ],
+      "answer": 1,
+      "explanation": "A decision tree in data mining is a flowchart-like model that makes decisions based on feature values. It splits data into branches based on feature values, with leaf nodes representing class predictions, creating an interpretable model for classification or regression."
+    },
+    {
+      "question": "What measure is commonly used to determine the purity of subsets in decision tree construction?",
+      "options": [
+        "Variance",
+        "Standard deviation",
+        "Entropy",
+        "Mean absolute error"
+      ],
+      "answer": 2,
+      "explanation": "Entropy is commonly used to determine the purity of subsets in decision tree construction. It measures the disorder or uncertainty in a set of examples, with lower entropy values indicating more homogeneous subsets that are better for classification."
+    },
+    {
+      "question": "What is the Naive Bayes classifier based on?",
+      "options": [
+        "Decision trees",
+        "Neural networks",
+        "Bayes theorem and conditional independence assumption",
+        "Distance between data points"
+      ],
+      "answer": 2,
+      "explanation": "The Naive Bayes classifier is based on Bayes theorem and the conditional independence assumption. It calculates the probability of a class given the features, assuming that features are conditionally independent given the class."
+    },
+    {
+      "question": "What does the k in k-Nearest Neighbor (kNN) represent?",
+      "options": [
+        "The number of features used for classification",
+        "The number of neighbors considered when making a prediction",
+        "The number of clusters to form",
+        "The kernel size for smoothing"
+      ],
+      "answer": 1,
+      "explanation": "In k-Nearest Neighbor (kNN), k represents the number of neighbors considered when making a prediction. The algorithm classifies an instance based on the majority class of its k nearest neighbors in the feature space."
+    },
+    {
+      "question": "How does classification with network information differ from traditional classification?",
+      "options": [
+        "It uses more complex algorithms",
+        "It requires less training data",
+        "It incorporates relationships between instances through graph structure",
+        "It always produces more accurate results"
+      ],
+      "answer": 2,
+      "explanation": "Classification with network information differs from traditional classification by incorporating relationships between instances through graph structure. It leverages connections between data points (e.g., friendship links between users) as additional information for making predictions."
+    },
+    {
+      "question": "What is clustering in data mining?",
+      "options": [
+        "Assigning predefined labels to data points",
+        "Dividing data into groups of similar objects without predefined labels",
+        "Ranking data points by importance",
+        "Selecting the most important features for analysis"
+      ],
+      "answer": 1,
+      "explanation": "Clustering in data mining is the process of dividing data into groups (clusters) of similar objects without predefined labels. It aims to discover natural groupings in the data based on similarity measures between instances."
+    },
+    {
+      "question": "What is the k-means algorithm used for?",
+      "options": [
+        "Classification of labeled data",
+        "Partitioning data into k clusters",
+        "Finding the k most important features",
+        "Selecting k samples from a dataset"
+      ],
+      "answer": 1,
+      "explanation": "The k-means algorithm is used for partitioning data into k clusters. It iteratively assigns data points to the nearest cluster centroid, then updates centroids based on the mean of points in each cluster, until convergence."
+    },
+    {
+      "question": "What measure is commonly used to evaluate the cohesiveness of clusters in unsupervised learning?",
+      "options": [
+        "Accuracy",
+        "Precision",
+        "Sum of squared distances between points and their cluster centroids",
+        "F1-score"
+      ],
+      "answer": 2,
+      "explanation": "The sum of squared distances between points and their cluster centroids (often called SSE - Sum of Squared Errors) is commonly used to evaluate the cohesiveness of clusters. Lower values indicate more cohesive clusters where points are closer to their centroids."
+    }
+  ]
+}
