@@ -1,0 +1,280 @@
+{
+  "quizTitle": "Social Media Mining: Network Analysis and Practical Applications",
+  "questions": [
+    {
+      "question": "Which algorithm would be most suitable for finding the most influential users in a social network based on their position in information pathways?",
+      "options": [
+        "Degree centrality calculation",
+        "k-means clustering",
+        "Betweenness centrality calculation",
+        "Random walk analysis"
+      ],
+      "answer": 2,
+      "explanation": "Betweenness centrality calculation would be most suitable for finding influential users based on their position in information pathways. This measure identifies nodes that frequently appear on shortest paths between other nodes, acting as bridges or gatekeepers for information flow."
+    },
+    {
+      "question": "When analyzing the spread of a rumor on a social network, which network characteristic would most directly impact the speed of propagation?",
+      "options": [
+        "Network density",
+        "Average path length",
+        "Transitivity",
+        "Degree distribution"
+      ],
+      "answer": 1,
+      "explanation": "Average path length would most directly impact the speed of rumor propagation. Networks with smaller average path lengths (like small-world networks) allow information to spread more quickly because fewer hops are needed for content to reach distant parts of the network."
+    },
+    {
+      "question": "In social media analysis, what does the 'friendship paradox' state?",
+      "options": [
+        "Most online friendships are not genuine relationships",
+        "The number of mutual friends decreases as network size increases",
+        "Your friends have more friends than you do, on average",
+        "People tend to befriend others who are similar to themselves"
+      ],
+      "answer": 2,
+      "explanation": "The friendship paradox states that your friends have more friends than you do, on average. This statistical property occurs because high-degree nodes (people with many friends) are overrepresented in the friendship network, skewing the observed average."
+    },
+    {
+      "question": "When using PageRank to identify important users in a Twitter network, what would the edges in the graph typically represent?",
+      "options": [
+        "Retweet relationships",
+        "Similar content interests",
+        "Follower relationships",
+        "Physical proximity"
+      ],
+      "answer": 2,
+      "explanation": "When using PageRank to identify important users in a Twitter network, edges would typically represent follower relationships. PageRank works by modeling how importance flows through directed connections, making it well-suited for the follower graph where influence can propagate through the network."
+    },
+    {
+      "question": "What does a high clustering coefficient in a social network indicate?",
+      "options": [
+        "The network has many isolated users",
+        "Information spreads slowly through the network",
+        "Users tend to form tightly-knit groups where friends are also friends with each other",
+        "The network is highly centralized around a few influential users"
+      ],
+      "answer": 2,
+      "explanation": "A high clustering coefficient indicates that users tend to form tightly-knit groups where friends are also friends with each other. It measures the degree to which nodes cluster together, with high values suggesting many closed triangles of connections (triadic closure) in the network."
+    },
+    {
+      "question": "When analyzing the dynamics of online communities, which network model best represents the formation of highly connected hubs?",
+      "options": [
+        "Random Graph model",
+        "Small-World model",
+        "Preferential Attachment model",
+        "Regular Lattice model"
+      ],
+      "answer": 2,
+      "explanation": "The Preferential Attachment model best represents the formation of highly connected hubs in online communities. This model implements a 'rich-get-richer' mechanism where new users are more likely to connect to already popular users, leading to scale-free networks with high-degree hubs."
+    },
+    {
+      "question": "In the context of detecting coordinated influence campaigns on social media, what graph pattern would be most suspicious?",
+      "options": [
+        "Star-shaped clusters around celebrities",
+        "Highly clustered communities with minimal connections to other groups",
+        "Accounts with abnormally synchronized activities forming dense subgraphs",
+        "Long chains of sequential information sharing"
+      ],
+      "answer": 2,
+      "explanation": "Accounts with abnormally synchronized activities forming dense subgraphs would be the most suspicious pattern when detecting coordinated influence campaigns. Such structures often indicate artificial coordination rather than organic interaction patterns typical of genuine social media usage."
+    },
+    {
+      "question": "What technique would be most effective for identifying emerging topics in a large social media conversation graph?",
+      "options": [
+        "Degree centrality analysis",
+        "Community detection followed by content analysis within communities",
+        "Shortest path calculation",
+        "Maximum flow computation"
+      ],
+      "answer": 1,
+      "explanation": "Community detection followed by content analysis within communities would be most effective for identifying emerging topics in a large conversation graph. This approach can identify clusters of related discussions and then analyze the content within each community to determine the topics being discussed."
+    },
+    {
+      "question": "Which measure would be most useful for identifying potential 'bridges' between isolated communities in a social network?",
+      "options": [
+        "Closeness centrality",
+        "Clustering coefficient",
+        "Eigenvector centrality",
+        "Betweenness centrality"
+      ],
+      "answer": 3,
+      "explanation": "Betweenness centrality would be most useful for identifying potential bridges between isolated communities. Nodes with high betweenness lie on many shortest paths between other nodes and often connect otherwise separate parts of the network, making them ideal candidates for bridging isolated communities."
+    },
+    {
+      "question": "When analyzing the resilience of a social network to account suspensions, which network property would be most relevant to measure?",
+      "options": [
+        "Average degree",
+        "Network diameter",
+        "Component structure and connectivity",
+        "Clustering coefficient"
+      ],
+      "answer": 2,
+      "explanation": "Component structure and connectivity would be most relevant when analyzing network resilience to account suspensions. Understanding how the network is connected and identifying critical nodes whose removal would fragment the network provides insight into how susceptible the network is to targeted interventions."
+    },
+    {
+      "question": "In social media fraud detection using graphs, what edge feature would be most useful for identifying fake reviews?",
+      "options": [
+        "Temporal patterns of review posting",
+        "Linguistic similarity between reviews",
+        "Geographic distance between reviewers",
+        "Review length"
+      ],
+      "answer": 0,
+      "explanation": "Temporal patterns of review posting would be the most useful edge feature for identifying fake reviews. Coordinated groups of fake reviewers often post reviews in suspicious bursts or patterns, unlike the more natural temporal distribution typical of genuine reviews."
+    },
+    {
+      "question": "What network structure is most characteristic of echo chambers in social media?",
+      "options": [
+        "Star networks with central influencers",
+        "Densely connected, homogeneous communities with limited external connections",
+        "Scale-free networks with many weakly connected components",
+        "Regular lattices with uniform connectivity"
+      ],
+      "answer": 1,
+      "explanation": "Echo chambers in social media are most characteristically represented by densely connected, homogeneous communities with limited external connections. These structures facilitate the repeated exposure to similar opinions while minimizing exposure to diverse viewpoints from outside the community."
+    },
+    {
+      "question": "Which approach would be most effective for recommending new connections in a social network?",
+      "options": [
+        "Random recommendations to increase network diversity",
+        "Recommending high-degree nodes to everyone",
+        "Link prediction based on network structure and node similarities",
+        "Recommending based on physical proximity"
+      ],
+      "answer": 2,
+      "explanation": "Link prediction based on network structure and node similarities would be most effective for recommending new connections. This approach can identify likely but not-yet-formed relationships by analyzing existing connection patterns, common neighbors, and user attribute similarities."
+    },
+    {
+      "question": "In analyzing influence spread in social networks, what does the Independent Cascade model represent?",
+      "options": [
+        "Users making decisions independent of their social connections",
+        "A process where each activated node has one chance to activate each neighbor with some probability",
+        "Information spreading only through official channels",
+        "Content virality based solely on its quality"
+      ],
+      "answer": 1,
+      "explanation": "The Independent Cascade model represents a process where each activated node has one chance to activate each neighbor with some probability. It's a stochastic model of information diffusion where influence attempts are made independently with success probabilities typically based on the strength of relationships."
+    },
+    {
+      "question": "When using a graph-based approach for fake news detection, what node feature would likely be most predictive?",
+      "options": [
+        "Article length",
+        "Publication time",
+        "User engagement patterns and user credibility",
+        "Number of images"
+      ],
+      "answer": 2,
+      "explanation": "User engagement patterns and user credibility would likely be the most predictive node feature for fake news detection. The patterns of who shares content and how users interact with it often provide stronger signals about content veracity than the content itself in graph-based approaches."
+    },
+    {
+      "question": "What graph algorithm would be most appropriate for finding all possible influence pathways between two users in a social network?",
+      "options": [
+        "Breadth-First Search",
+        "k-means clustering",
+        "PageRank",
+        "All-paths enumeration algorithm"
+      ],
+      "answer": 3,
+      "explanation": "An all-paths enumeration algorithm would be most appropriate for finding all possible influence pathways between two users. While BFS finds the shortest path, identifying all potential influence routes requires enumerating all possible paths between the users, potentially with constraints on path length or weight."
+    },
+    {
+      "question": "Which network structure is most conducive to rapid information diffusion?",
+      "options": [
+        "Highly clustered communities with few inter-community connections",
+        "Small-world networks with high clustering and short average path lengths",
+        "Tree structures with minimal connectivity",
+        "Regular lattices with uniform connectivity"
+      ],
+      "answer": 1,
+      "explanation": "Small-world networks with high clustering and short average path lengths are most conducive to rapid information diffusion. The high clustering supports local spreading within communities, while the short path lengths enable quick jumps across the network, facilitating both local and global diffusion."
+    },
+    {
+      "question": "What graph-based approach would be most effective for identifying potential misinformation superspreaders?",
+      "options": [
+        "Community detection to find echo chambers",
+        "Centrality analysis to identify influential nodes",
+        "Edge weight analysis to find strong connections",
+        "Clustering coefficient calculation"
+      ],
+      "answer": 1,
+      "explanation": "Centrality analysis to identify influential nodes would be most effective for identifying potential misinformation superspreaders. Metrics like betweenness, eigenvector centrality, or k-core decomposition can identify users with the structural position and influence to effectively spread content widely."
+    },
+    {
+      "question": "In a user-item interaction graph for e-commerce recommendations, what would edges typically represent?",
+      "options": [
+        "Similarity between products",
+        "User demographic connections",
+        "User-item interactions such as purchases, views, or ratings",
+        "Shipping times"
+      ],
+      "answer": 2,
+      "explanation": "In a user-item interaction graph for e-commerce recommendations, edges would typically represent user-item interactions such as purchases, views, or ratings. These interactions form the bipartite structure that recommendation algorithms use to identify patterns and make predictions."
+    },
+    {
+      "question": "What is the main limitation of traditional centrality measures when applied to very large social networks?",
+      "options": [
+        "They only work with undirected graphs",
+        "They cannot identify influential users accurately",
+        "They are computationally expensive for networks with millions of nodes",
+        "They require labeled data"
+      ],
+      "answer": 2,
+      "explanation": "The main limitation of traditional centrality measures when applied to very large social networks is that they are computationally expensive for networks with millions of nodes. Measures like betweenness centrality have high computational complexity, making approximate or distributed algorithms necessary for large-scale analysis."
+    },
+    {
+      "question": "How does homophily affect community structure in social networks?",
+      "options": [
+        "It leads to more centralized networks",
+        "It reduces the overall connectivity of the network",
+        "It results in communities of similar individuals with dense internal connections",
+        "It increases the network diameter"
+      ],
+      "answer": 2,
+      "explanation": "Homophily ('birds of a feather flock together') leads to communities of similar individuals with dense internal connections. When people tend to connect with others who share their characteristics or interests, the network naturally forms clusters of similar individuals."
+    },
+    {
+      "question": "What network property would be most important to measure when evaluating the effectiveness of an influence maximization strategy?",
+      "options": [
+        "Network transitivity",
+        "Coverage and spread of information from seed nodes",
+        "Average node degree",
+        "Network diameter"
+      ],
+      "answer": 1,
+      "explanation": "When evaluating the effectiveness of an influence maximization strategy, the most important property to measure would be coverage and spread of information from seed nodes. This directly captures how widely influence propagates from the selected influential nodes."
+    },
+    {
+      "question": "Which technique would be most appropriate for identifying fake accounts in a social network?",
+      "options": [
+        "Analyzing only the content posted by accounts",
+        "Counting the number of friends each account has",
+        "Graph-based anomaly detection looking at account connectivity patterns and behaviors",
+        "Checking account creation dates"
+      ],
+      "answer": 2,
+      "explanation": "Graph-based anomaly detection looking at account connectivity patterns and behaviors would be most appropriate for identifying fake accounts. This approach can identify suspicious patterns such as coordinated behaviors, unusual connection patterns, or structural anomalies that distinguish fake accounts from genuine users."
+    },
+    {
+      "question": "What method would be most effective for analyzing how information flows across different communities in a social network?",
+      "options": [
+        "Community detection followed by inter-community link analysis",
+        "Simple degree centrality analysis",
+        "Random sampling of content",
+        "Diameter calculation"
+      ],
+      "answer": 0,
+      "explanation": "Community detection followed by inter-community link analysis would be most effective for analyzing information flows across communities. This approach identifies community boundaries first, then specifically examines the connections between communities to understand how information traverses these boundaries."
+    },
+    {
+      "question": "In a study of viral content spread on social media, which network structure would typically lead to the most widespread diffusion?",
+      "options": [
+        "Highly segregated communities with few bridges",
+        "Star networks with a single central influencer",
+        "Networks with high-degree hubs and short average path lengths",
+        "Regular lattices with uniform connectivity"
+      ],
+      "answer": 2,
+      "explanation": "Networks with high-degree hubs and short average path lengths would typically lead to the most widespread diffusion of viral content. The hubs can quickly spread content to many users, while the short paths ensure that the content can reach distant parts of the network within few steps."
+    }
+  ]
+}
