@@ -1,280 +1,280 @@
 {
-  "quizTitle": "Social Media Mining: Advanced Concepts",
+  "quizTitle": "Social Media Mining: Network Measures and Centrality",
   "questions": [
     {
-      "question": "What is the main difference between Graph Neural Networks and traditional neural networks?",
+      "question": "What does centrality define in a network?",
       "options": [
-        "GNNs use fewer parameters",
-        "GNNs can process structured graph data while traditional neural networks require fixed-size inputs",
-        "GNNs are always supervised while traditional neural networks can be unsupervised",
-        "GNNs are specifically designed for image processing"
+        "How isolated a node is",
+        "How important a node is within a network",
+        "The physical position of a node",
+        "The number of components in the network"
       ],
       "answer": 1,
-      "explanation": "The key difference is that Graph Neural Networks (GNNs) can naturally handle graph-structured data with varying sizes and topologies, while traditional neural networks typically require fixed-size inputs. GNNs update node representations by aggregating information from neighboring nodes, making them ideal for social network analysis."
+      "explanation": "Centrality defines how important a node is within a network. Various centrality measures quantify different aspects of node importance based on their position and connections in the graph."
     },
     {
-      "question": "Which of the following is a characteristic of the message passing framework in GNNs?",
+      "question": "Degree centrality measures a node's?",
       "options": [
-        "Messages are only passed once between nodes",
-        "Messages are passed in one direction only",
-        "Node representations are updated by aggregating information from neighbors",
-        "Message passing bypasses nodes with high degree"
+        "Frequency in shortest paths",
+        "Distance to all other nodes",
+        "Number of direct connections",
+        "Ability to spread influence"
       ],
       "answer": 2,
-      "explanation": "In the message passing framework of Graph Neural Networks, node representations are iteratively updated by aggregating information from neighboring nodes. This process allows nodes to capture information from their local graph structure and, through multiple iterations, from increasingly larger neighborhoods."
+      "explanation": "Degree centrality measures a node's number of direct connections. It is the simplest centrality measure and counts how many edges are connected to a node."
     },
     {
-      "question": "What is the primary mechanism used in Graph Attention Networks (GAT) that differentiates it from standard GCNs?",
+      "question": "In directed graphs, which type of degree is mostly used in practice for degree centrality?",
       "options": [
-        "It uses random walks to sample neighborhoods",
-        "It assigns different weights to different neighbors based on learned attention",
-        "It ignores nodes with low degree",
-        "It uses recurrent neural networks to process sequences"
-      ],
-      "answer": 1,
-      "explanation": "Graph Attention Networks (GAT) differentiate themselves from standard Graph Convolutional Networks (GCNs) by employing attention mechanisms that assign different weights to different neighbors. Instead of using fixed weights based solely on graph structure, GAT learns to focus on the most relevant neighbors for each node, allowing for more expressive feature learning."
-    },
-    {
-      "question": "In the context of recommendation systems using GNNs, what type of graph is typically used?",
-      "options": [
-        "Directed cyclic graphs",
-        "Bipartite graphs connecting users and items",
-        "Complete graphs where all nodes are connected",
-        "Tree structures"
-      ],
-      "answer": 1,
-      "explanation": "In recommendation systems using GNNs, bipartite graphs are typically used to represent the relationships between users and items. In these graphs, one set of nodes represents users, another set represents items (products, movies, etc.), and edges represent interactions (purchases, ratings, clicks, etc.) between users and items."
-    },
-    {
-      "question": "What problem does the 'over-smoothing' issue refer to in deep Graph Neural Networks?",
-      "options": [
-        "Node representations become too similar as the network depth increases",
-        "The network becomes too computationally expensive",
-        "The model memorizes the training data",
-        "The graph becomes too sparse for effective learning"
-      ],
-      "answer": 0,
-      "explanation": "Over-smoothing refers to the phenomenon where node representations become increasingly similar as more GNN layers are stacked. After many message passing steps, all node features tend to converge to the same values, losing their distinctive information. This limits the depth of GNNs and motivates research into architectures that can mitigate this problem."
-    },
-    {
-      "question": "What is the main advantage of using GraphSAGE over traditional GCNs?",
-      "options": [
-        "GraphSAGE uses attention mechanisms",
-        "GraphSAGE works only on directed graphs",
-        "GraphSAGE enables inductive learning on previously unseen nodes",
-        "GraphSAGE requires fewer computational resources"
+        "Out-degree",
+        "Total degree",
+        "In-degree",
+        "Normalized degree"
       ],
       "answer": 2,
-      "explanation": "A key advantage of GraphSAGE (Graph SAmple and aggreGatE) is its ability to perform inductive learning, allowing it to generate embeddings for previously unseen nodes. Unlike traditional GCNs that learn embeddings for all nodes during training, GraphSAGE learns aggregation functions that can be applied to new nodes with their feature vectors."
+      "explanation": "In directed graphs, in-degree is mostly used in practice for degree centrality. This measures the number of incoming connections, which often represents popularity or prestige."
     },
     {
-      "question": "In social media mining, what does the 'homophily' principle refer to?",
+      "question": "Betweenness centrality measures a node's?",
       "options": [
-        "The tendency of similar nodes to connect with each other",
-        "The ability of a model to generalize to new nodes",
-        "The process of identifying influential nodes",
-        "The phenomenon where all nodes eventually become connected"
-      ],
-      "answer": 0,
-      "explanation": "The homophily principle, often summarized as 'birds of a feather flock together,' refers to the tendency of similar nodes to form connections with each other. In social networks, users often connect with others who share similar interests, demographics, or opinions, making homophily an important concept in social media mining."
-    },
-    {
-      "question": "What is a key application of Graph Neural Networks in natural language processing?",
-      "options": [
-        "Image classification",
-        "Speech recognition",
-        "Semantic parsing and relation extraction",
-        "Video compression"
+        "Number of direct connections",
+        "Distance to all other nodes",
+        "Frequency in shortest paths",
+        "Importance of neighboring nodes"
       ],
       "answer": 2,
-      "explanation": "Graph Neural Networks have important applications in natural language processing, particularly for tasks like semantic parsing and relation extraction. By representing text as graph structures (such as dependency trees or knowledge graphs), GNNs can capture complex relationships between words, entities, and concepts in text data."
+      "explanation": "Betweenness centrality measures a node's frequency in shortest paths between other nodes. It identifies nodes that act as bridges or gatekeepers in information flow across the network."
     },
     {
-      "question": "Which of the following best describes the 'link prediction' task in social media mining?",
+      "question": "Closeness centrality measures a node's?",
       "options": [
-        "Predicting whether a user will click on a specific URL",
-        "Predicting the formation of new edges between nodes in a graph",
-        "Predicting the flow of information through a network",
-        "Predicting whether a social media post contains external links"
+        "Number of direct connections",
+        "Distance to all other nodes",
+        "Frequency in shortest paths",
+        "Reach of influence"
       ],
       "answer": 1,
-      "explanation": "Link prediction refers to the task of predicting the formation of new edges between nodes in a graph. In social media mining, this often translates to predicting potential future connections between users, identifying potential friendships, collaborations, or interactions that haven't occurred yet based on existing network structure."
+      "explanation": "Closeness centrality measures a node's distance to all other nodes. Specifically, it calculates how close a node is to all other nodes based on the shortest paths, with higher values indicating nodes that can quickly reach or be reached by others."
     },
     {
-      "question": "What is the primary challenge in using GNNs for very large social networks?",
+      "question": "Eigenvector centrality generalizes degree centrality by incorporating what?",
       "options": [
-        "GNNs cannot handle directed edges",
-        "The computational complexity of processing the entire graph at once",
-        "GNNs require labeled data for all nodes",
-        "Social networks change too rapidly for GNNs to be effective"
+        "Degree of the node itself",
+        "Importance of neighbors",
+        "Shortest path lengths",
+        "Overall connectivity of the graph"
       ],
       "answer": 1,
-      "explanation": "A primary challenge in applying GNNs to very large social networks is the computational complexity of processing the entire graph at once. The memory requirements and computation time scale with graph size, making full-batch training infeasible for networks with millions or billions of nodes and edges, necessitating sampling-based or cluster-based approaches."
+      "explanation": "Eigenvector centrality generalizes degree centrality by incorporating the importance of neighbors. It assumes that connections to high-scoring nodes contribute more to a node's importance than connections to low-scoring nodes."
     },
     {
-      "question": "Which technique is commonly used to address the scalability issue in GNNs for large graphs?",
+      "question": "What centrality measure adds a bias term to solve problems with eigenvector centrality in directed graphs?",
       "options": [
-        "Converting graphs to images",
-        "Neighborhood sampling methods",
-        "Reducing all graphs to trees",
-        "Ignoring node features entirely"
-      ],
-      "answer": 1,
-      "explanation": "Neighborhood sampling methods, such as those used in GraphSAGE, PinSAGE, and Cluster-GCN, are commonly employed to address scalability issues in GNNs. These approaches sample a subset of neighbors for each node during training rather than using the entire neighborhood, significantly reducing memory requirements and computational costs."
-    },
-    {
-      "question": "What is the purpose of the readout function in a Graph Neural Network used for graph-level tasks?",
-      "options": [
-        "To initialize node features",
-        "To aggregate node representations into a graph-level representation",
-        "To visualize the graph structure",
-        "To evaluate model performance"
-      ],
-      "answer": 1,
-      "explanation": "In graph-level tasks (such as graph classification), the readout function is responsible for aggregating individual node representations into a single graph-level representation. Common readout operations include mean pooling, sum pooling, and more sophisticated hierarchical pooling methods that capture the graph structure in the final representation."
-    },
-    {
-      "question": "In the context of fake news detection using GNNs, what type of graph is typically constructed?",
-      "options": [
-        "A graph connecting only fake news articles",
-        "A homogeneous graph of users only",
-        "A heterogeneous graph connecting news articles, users, and possibly other entities",
-        "A tree structure representing the hierarchy of news sources"
+        "PageRank",
+        "Betweenness Centrality",
+        "Katz Centrality",
+        "Closeness Centrality"
       ],
       "answer": 2,
-      "explanation": "For fake news detection using GNNs, researchers typically construct heterogeneous graphs that connect multiple types of entities, such as news articles, users who share them, sources, and sometimes topics or claims. This heterogeneous structure allows the model to capture complex propagation patterns and relationships that are indicative of fake news."
+      "explanation": "Katz centrality adds a bias term to solve problems with eigenvector centrality in directed graphs. This prevents nodes with no incoming connections from having zero centrality values."
     },
     {
-      "question": "What is a key difference between node classification and graph classification tasks?",
+      "question": "The PageRank algorithm addresses an issue with Katz centrality by dividing the passed centrality by what?",
       "options": [
-        "Node classification requires supervised learning while graph classification can be unsupervised",
-        "Node classification assigns labels to individual nodes while graph classification assigns labels to entire graphs",
-        "Node classification works on directed graphs while graph classification works on undirected graphs",
-        "Node classification is only applicable to social networks while graph classification works on any graph"
+        "The in-degree of the node",
+        "The total degree of the node",
+        "The out-degree of that node",
+        "A constant factor"
       ],
-      "answer": 1,
-      "explanation": "The key difference is that node classification assigns labels to individual nodes within a graph (e.g., identifying user types in a social network), while graph classification assigns labels to entire graphs (e.g., classifying molecules as toxic or non-toxic). This difference affects how GNNs are designed, particularly in how node representations are aggregated for graph-level predictions."
+      "answer": 2,
+      "explanation": "The PageRank algorithm addresses an issue with Katz centrality by dividing the passed centrality by the out-degree of the node. This prevents highly connected nodes from passing excessive influence to all their connections."
     },
     {
-      "question": "What does the 'structural role' of a node refer to in a graph?",
+      "question": "What metric measures transitivity in undirected graphs?",
       "options": [
-        "The node's absolute position in the graph layout",
-        "The node's function in the graph based on its connectivity patterns rather than its specific neighbors",
-        "The total number of edges connected to the node",
-        "The node's importance as measured by centrality metrics"
-      ],
-      "answer": 1,
-      "explanation": "A node's structural role refers to its function within the graph based on its connectivity patterns rather than the specific identities of its neighbors. For example, nodes might play roles such as 'bridge' between communities, 'hub' connecting many nodes, or 'peripheral' node at the edge of the network, regardless of which specific nodes they connect to."
-    },
-    {
-      "question": "What is the primary difference between transductive and inductive learning in graph machine learning?",
-      "options": [
-        "Transductive learning requires more data than inductive learning",
-        "Transductive learning makes predictions for nodes seen during training, while inductive learning can generalize to unseen nodes",
-        "Transductive learning works on directed graphs while inductive learning works on undirected graphs",
-        "Transductive learning uses supervised approaches while inductive learning is unsupervised"
-      ],
-      "answer": 1,
-      "explanation": "In graph machine learning, transductive learning makes predictions for nodes that were observed during training (but whose labels might be unknown), leveraging their connections in the graph. Inductive learning, on the other hand, learns a general model that can generate embeddings and make predictions for entirely new nodes that weren't present during training."
-    },
-    {
-      "question": "In sentiment analysis of social media text using graph-based methods, what do nodes and edges typically represent?",
-      "options": [
-        "Nodes are users and edges are their friendships",
-        "Nodes are words or concepts and edges are semantic or syntactic relationships",
-        "Nodes are individual posts and edges connect posts on the same topic",
-        "Nodes are platforms and edges represent cross-posting behavior"
-      ],
-      "answer": 1,
-      "explanation": "In graph-based sentiment analysis of text, nodes typically represent words, phrases, or concepts, while edges represent relationships between them such as co-occurrence, syntactic dependencies, or semantic relationships. This graph representation captures the context and relationships between terms that can be crucial for accurate sentiment detection."
-    },
-    {
-      "question": "Which of the following is NOT a common challenge in applying GNNs to social media mining?",
-      "options": [
-        "Dynamic nature of social networks",
-        "Privacy concerns and limited data access",
-        "Heterogeneity of node and edge types",
-        "Excessive processing speed making real-time analysis difficult"
+        "Reciprocity",
+        "Balance",
+        "Status",
+        "Clustering coefficient"
       ],
       "answer": 3,
-      "explanation": "Excessive processing speed is not a challenge; in fact, processing speed limitations are a challenge. Common challenges include the dynamic nature of social networks that evolve over time, privacy concerns and limited data access due to regulations, and the heterogeneity of node and edge types requiring specialized models. GNNs often struggle with computational efficiency rather than being too fast."
+      "explanation": "The clustering coefficient measures transitivity in undirected graphs. It quantifies how much nodes tend to cluster together, or how likely it is that two neighbors of a node are also connected to each other."
     },
     {
-      "question": "What is a key benefit of using Graph Neural Networks for community detection in social networks?",
+      "question": "Transitivity in a social network refers to what concept?",
       "options": [
-        "GNNs require less computational resources than traditional methods",
-        "GNNs can leverage both network structure and node features simultaneously",
-        "GNNs always find the globally optimal community structure",
-        "GNNs can only be applied to small networks with clear community boundaries"
-      ],
-      "answer": 1,
-      "explanation": "A key benefit of using GNNs for community detection is their ability to leverage both network structure (the connections between users) and node features (user attributes, content, behavior, etc.) simultaneously. Traditional methods often use either structure or features, while GNNs naturally incorporate both types of information into the learning process."
-    },
-    {
-      "question": "In a recommendation system using GraphSAGE, what does the neighborhood aggregation step accomplish?",
-      "options": [
-        "It directly predicts item ratings",
-        "It computes similarity scores between all users",
-        "It incorporates information from similar users and items into embeddings",
-        "It removes unpopular items from consideration"
+        "The speed of information spread",
+        "The frequency of reciprocal connections",
+        "A friend of my friend is my friend",
+        "The number of connections an individual has"
       ],
       "answer": 2,
-      "explanation": "In a recommendation system using GraphSAGE, the neighborhood aggregation step incorporates information from similar users and items into the node embeddings. By aggregating features from neighbors, a user's embedding captures information about other similar users and the items they've interacted with, enabling more effective recommendations."
+      "explanation": "Transitivity in a social network refers to the concept that 'a friend of my friend is my friend.' It measures the tendency of nodes to form triangles of connections in the network."
     },
     {
-      "question": "What is an example of a heterogeneous graph in social media mining?",
+      "question": "Reciprocity in a network considers closed loops of what length?",
       "options": [
-        "A graph where all nodes have different degrees",
-        "A graph with multiple types of nodes and edges",
-        "A graph where some connections are missing",
-        "A graph that changes over time"
+        "1",
+        "2",
+        "3",
+        "Depends on the network"
       ],
       "answer": 1,
-      "explanation": "A heterogeneous graph in social media mining has multiple types of nodes and edges. For example, a graph might include users, posts, hashtags, and locations as different types of nodes, with different types of relationships between them such as 'user creates post,' 'post contains hashtag,' and 'user visits location.'"
+      "explanation": "Reciprocity in a network considers closed loops of length 2. It measures the tendency of pairs of nodes to form mutual connections, such as when one user follows another and that user follows back."
     },
     {
-      "question": "What does the 'inductive bias' of Graph Neural Networks refer to?",
+      "question": "Social Balance Theory deals with consistency in what kind of relationships?",
       "options": [
-        "Their tendency to be biased toward high-degree nodes",
-        "The built-in assumptions about data that enable them to learn from graph structures",
-        "Their ability to perform inductive learning tasks",
-        "A statistical bias in the output distributions"
-      ],
-      "answer": 1,
-      "explanation": "The inductive bias of Graph Neural Networks refers to their built-in assumptions about the data that enable effective learning from graph structures. These include assumptions like locality (nearby nodes are related), permutation invariance (node ordering doesn't matter), and compositionality (complex patterns can be built from simpler ones across the graph)."
-    },
-    {
-      "question": "What is a primary application of temporal Graph Neural Networks in social media mining?",
-      "options": [
-        "Counting the number of posts over time",
-        "Modeling the evolution of user interactions and network structure over time",
-        "Scheduling optimal posting times",
-        "Measuring network latency"
-      ],
-      "answer": 1,
-      "explanation": "Temporal Graph Neural Networks are primarily applied to model the evolution of user interactions and network structure over time. This allows for analyzing how information spreads, how communities form and dissolve, how user preferences change, and for making time-aware predictions about future interactions or behavior in dynamic social networks."
-    },
-    {
-      "question": "In a Graph Neural Network for social media user embedding, what kind of information is typically passed between neighboring nodes during message passing?",
-      "options": [
-        "Only binary connection information",
-        "Raw text of social media posts",
-        "Feature vectors combining user attributes and learned representations",
-        "Only the number of mutual connections"
+        "Familial relationships",
+        "Economic relationships",
+        "Friend/foe relationships",
+        "Professional relationships"
       ],
       "answer": 2,
-      "explanation": "During message passing in a GNN for social media user embedding, what's typically passed between neighboring nodes are feature vectors that combine user attributes (such as demographics, activity patterns, or content preferences) and learned representations from previous layers. This allows users to aggregate information from their social connections."
+      "explanation": "Social Balance Theory deals with consistency in friend/foe relationships among individuals. It examines patterns of positive and negative ties and their tendency to form balanced structures."
     },
     {
-      "question": "What is the main reason Graph Neural Networks are effective for detecting coordinated inauthentic behavior on social media?",
+      "question": "Structural Equivalence between two nodes is based on what?",
       "options": [
-        "They can analyze images attached to social media posts",
-        "They can process millions of posts per second",
-        "They can identify unusual patterns of connections and synchronized activities across accounts",
-        "They can automatically report suspicious accounts to platform administrators"
+        "The similarity of their attributes",
+        "The paths that connect them",
+        "The neighborhood shared by them",
+        "Their position in the shortest paths between other nodes"
       ],
       "answer": 2,
-      "explanation": "GNNs are effective for detecting coordinated inauthentic behavior (such as bot networks or influence campaigns) because they can identify unusual patterns of connections and synchronized activities across accounts. By modeling the relationships between accounts, content, and temporal patterns, GNNs can detect coordinated groups even when individual accounts appear legitimate."
+      "explanation": "Structural Equivalence between two nodes is based on the neighborhood shared by them. Two nodes are structurally equivalent if they have the same pattern of relationships with other nodes in the network."
+    },
+    {
+      "question": "Regular Equivalence considers nodes similar if their what are similar?",
+      "options": [
+        "Attributes",
+        "Direct neighbors",
+        "Neighborhoods",
+        "Centrality measures"
+      ],
+      "answer": 2,
+      "explanation": "Regular Equivalence considers nodes similar if their neighborhoods are similar. Unlike structural equivalence, nodes don't need to share the same exact neighbors, but rather similar types of neighbors."
+    },
+    {
+      "question": "The friendship paradox states that, on average, your friends have what compared to you?",
+      "options": [
+        "Lower degree",
+        "Similar degree",
+        "Higher degree",
+        "Less centrality"
+      ],
+      "answer": 2,
+      "explanation": "The friendship paradox states that, on average, your friends have higher degree (more friends) than you do. This is a statistical property that occurs because high-degree nodes are overrepresented in the set of all friendships."
+    },
+    {
+      "question": "In group centrality measures, what does group degree centrality measure?",
+      "options": [
+        "The total number of connections within the group",
+        "The number of nodes outside the group that are connected to group members",
+        "The average distance between group members",
+        "The number of shortest paths passing through the group"
+      ],
+      "answer": 1,
+      "explanation": "Group degree centrality measures the number of nodes outside the group that are connected to group members. It quantifies how well-connected the group is to the rest of the network."
+    },
+    {
+      "question": "Which centrality measure is used by the Google search engine to rank web pages?",
+      "options": [
+        "Degree centrality",
+        "Betweenness centrality",
+        "Closeness centrality",
+        "PageRank"
+      ],
+      "answer": 3,
+      "explanation": "PageRank is the centrality measure used by the Google search engine to rank web pages. It was developed by Google founders Larry Page and Sergey Brin to determine the importance of web pages based on their link structure."
+    },
+    {
+      "question": "What is the main difference between local and global clustering coefficient?",
+      "options": [
+        "Local is measured for the entire network, global for individual nodes",
+        "Local is measured for individual nodes, global for the entire network",
+        "Local considers only direct neighbors, global considers all nodes",
+        "Local is applied to directed graphs, global to undirected graphs"
+      ],
+      "answer": 1,
+      "explanation": "The local clustering coefficient is measured for individual nodes, while the global clustering coefficient is measured for the entire network. The local version measures transitivity in a node's immediate neighborhood, while the global version measures it across the entire graph."
+    },
+    {
+      "question": "What type of social network analysis focuses on the density of connections among members of the same community?",
+      "options": [
+        "Centrality analysis",
+        "Path analysis",
+        "Cohesion analysis",
+        "Structural hole analysis"
+      ],
+      "answer": 2,
+      "explanation": "Cohesion analysis in social network analysis focuses on the density of connections among members of the same community. It examines how tightly knit groups are and how they are structured."
+    },
+    {
+      "question": "What does a high clustering coefficient in a social network indicate?",
+      "options": [
+        "Most nodes have few connections",
+        "Information spreads slowly through the network",
+        "The network has many disconnected components",
+        "Friends of a user are often friends with one another"
+      ],
+      "answer": 3,
+      "explanation": "A high clustering coefficient in a social network indicates that friends of a user are often friends with one another. It suggests that the network has many closed triangles of connections, which is common in social groups."
+    },
+    {
+      "question": "In a signed graph representing friend/foe relationships, a triangle with two positive edges and one negative edge is considered?",
+      "options": [
+        "Balanced",
+        "Unbalanced",
+        "Neutral",
+        "Incomplete"
+      ],
+      "answer": 1,
+      "explanation": "In a signed graph representing friend/foe relationships, a triangle with two positive edges and one negative edge is considered unbalanced. According to balance theory, such configurations create psychological tension and tend to evolve toward balanced states."
+    },
+    {
+      "question": "The Jaccard similarity coefficient between two nodes measures what?",
+      "options": [
+        "The shortest path distance between them",
+        "The overlap of their neighborhood sets",
+        "Their centrality difference",
+        "The number of paths connecting them"
+      ],
+      "answer": 1,
+      "explanation": "The Jaccard similarity coefficient between two nodes measures the overlap of their neighborhood sets. It is calculated as the size of the intersection divided by the size of the union of their neighbor sets."
+    },
+    {
+      "question": "What is the normalized range of values for the Jaccard similarity coefficient?",
+      "options": [
+        "-1 to 1",
+        "0 to 1",
+        "0 to infinity",
+        "-infinity to infinity"
+      ],
+      "answer": 1,
+      "explanation": "The normalized range of values for the Jaccard similarity coefficient is 0 to 1. A value of 0 indicates no overlap in neighborhoods, while 1 indicates identical neighborhoods."
+    },
+    {
+      "question": "What is the result when we compare a node's closeness centrality with its betweenness centrality?",
+      "options": [
+        "They always yield the same ranking of nodes",
+        "They may identify different important nodes based on different network roles",
+        "Closeness is always higher than betweenness for the same node",
+        "They can only be compared in directed networks"
+      ],
+      "answer": 1,
+      "explanation": "When we compare a node's closeness centrality with its betweenness centrality, they may identify different important nodes based on different network roles. A node might be close to many others (high closeness) but not lie on many shortest paths (low betweenness), or vice versa."
+    },
+    {
+      "question": "In social media analysis, which centrality measure best identifies potential influencers who can reach many people quickly?",
+      "options": [
+        "Degree centrality",
+        "Betweenness centrality",
+        "Closeness centrality",
+        "Eigenvector centrality"
+      ],
+      "answer": 2,
+      "explanation": "In social media analysis, closeness centrality best identifies potential influencers who can reach many people quickly. Nodes with high closeness centrality have short paths to many other nodes, allowing for rapid information diffusion."
     }
   ]
 }
